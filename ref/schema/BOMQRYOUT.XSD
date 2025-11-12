@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!-- Copyright 1994-2014 SYSPRO Ltd.-->
+<!-- 
+     Schema for the BOM Costing Query Business Object
+-->
+<xsd:schema elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="BomQuery">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="SystemInformation">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CssStyle" type="xsd:string"/>
+              <xsd:element name="Language" type="xsd:string"/>
+              <xsd:element name="DecFormat" type="xsd:string"/>
+              <xsd:element name="DateFormat" type="xsd:string"/>
+              <xsd:element name="Role" type="xsd:string"/>
+              <xsd:element name="Version" type="xsd:string"/>
+              <xsd:element name="CompanyId" type="xsd:string"/>
+              <xsd:element name="CompanyName" type="xsd:string"/>
+              <xsd:element name="OperatorCode" type="xsd:string"/>
+              <xsd:element name="OperatorName" type="xsd:string"/>
+              <xsd:element name="OperatorGroup" type="xsd:string"/>
+              <xsd:element name="OperatorEmailAddress" type="xsd:string"/>
+              <xsd:element name="OperatorLocation" type="xsd:string"/>
+              <xsd:element name="ReportDate" type="xsd:string"/>
+              <xsd:element name="UseSeparatorOnReports" type="xsd:string"/>
+              <xsd:element name="SeparatorToUse" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="Parent">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="StockCode" type="xsd:string"/>
+              <xsd:element name="Description" type="xsd:string"/>
+              <xsd:element name="LongDesc" type="xsd:string"/>
+              <xsd:element name="PartCategory" type="xsd:string"/>
+              <xsd:element name="StockUom" type="xsd:string"/>
+              <xsd:element name="AlternateUom" type="xsd:string"/>
+              <xsd:element name="OtherUom" type="xsd:string"/>
+              <xsd:element name="ManufacturingUom" type="xsd:string"/>
+              <xsd:element name="Mass" type="xsd:string"/>
+              <xsd:element name="Volume" type="xsd:string"/>
+              <xsd:element name="Supplier" type="xsd:string"/>
+              <xsd:element name="ProductClass" type="xsd:string"/>
+              <xsd:element name="Buyer" type="xsd:string"/>
+              <xsd:element name="Planner" type="xsd:string"/>
+              <xsd:element name="AbcCostingReq" type="xsd:string"/>
+              <xsd:element name="WarehouseToUse" type="xsd:string"/>
+              <xsd:element name="Ebq" type="xsd:string"/>
+              <xsd:element name="PanSize" type="xsd:string"/>
+              <xsd:element name="Version" type="xsd:string"/>
+              <xsd:element name="Release" type="xsd:string"/>
+              <xsd:element name="Route" type="xsd:string"/>
+              <xsd:element name="BOMROU_Description" type="xsd:string"/>
+              <xsd:element name="IconOpen" type="xsd:string"/>
+              <xsd:element name="IconClosed" type="xsd:string"/>
+              <xsd:element name="Operation" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Operation" type="xsd:string"/>
+                    <xsd:element name="WorkCentre" type="xsd:string"/>
+                    <xsd:element name="Description" type="xsd:string"/>
+                    <xsd:element name="TimeUom" type="xsd:string"/>
+                    <xsd:element name="ProductClass" type="xsd:string"/>
+                    <xsd:element name="WcRateInd" type="xsd:string"/>
+                    <xsd:element name="WhatIfWcInd" type="xsd:string"/>
+                    <xsd:element name="SubcontractFlag" type="xsd:string"/>
+                    <xsd:element name="ISetUpTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IRunTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IStartupTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ITeardownTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IWaitTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IStartupQty" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IMachine" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IUnitCapacity" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IMaxWorkOpertrs" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IMaxProdUnits" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ITimeTaken" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="IQuantity" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubSupplier" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubPoStockCode" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubQtyPer" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubOrderUom" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubOpUnitValue" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubWhatIfValue" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubPlanner" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubBuyer" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubLeadTime" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubDockToStock" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubOffsiteDays" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Milestone" type="xsd:string"/>
+                    <xsd:element name="ElapsedTime" type="xsd:string"/>
+                    <xsd:element name="MovementTime" type="xsd:string"/>
+                    <xsd:element name="NarrationCode" type="xsd:string"/>
+                    <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                    <xsd:element name="NumOfPieces" type="xsd:string"/>
+                    <xsd:element name="InspectionFlag" type="xsd:string"/>
+                    <xsd:element name="OperYieldPct" type="xsd:string"/>
+                    <xsd:element name="OperYieldQty" type="xsd:string"/>
+                    <xsd:element name="MinorSetup" type="xsd:string"/>
+                    <xsd:element name="MinorSetupCode" type="xsd:string"/>
+                    <xsd:element name="ToolSet" type="xsd:string"/>
+                    <xsd:element name="ToolSetQty" type="xsd:string"/>
+                    <xsd:element name="ToolConsumption" type="xsd:string"/>
+                    <xsd:element name="TimeCalcFlag" type="xsd:string"/>
+                    <xsd:element name="OprSubContract" type="xsd:string"/>
+                    <xsd:element name="OprSubContractCost" type="xsd:string"/>
+                    <xsd:element name="OprLabour" type="xsd:string"/>
+                    <xsd:element name="OprFixedOverHead" type="xsd:string"/>
+                    <xsd:element name="OprVariableOverHead" type="xsd:string"/>
+                    <xsd:element name="OperationCostTotal" type="xsd:string"/>
+                    <xsd:element name="Narrations">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Narration" type="xsd:string" maxOccurs="unbounded"/>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="IconOpen" type="xsd:string"/>
+                    <xsd:element name="IconClosed" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="Component" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="Component" type="xsd:string"/>
+                    <xsd:element name="Description" type="xsd:string"/>
+                    <xsd:element name="LongDesc" type="xsd:string"/>
+                    <xsd:element name="PartCategory" type="xsd:string"/>
+                    <xsd:element name="StockUom" type="xsd:string"/>
+                    <xsd:element name="AlternateUom" type="xsd:string"/>
+                    <xsd:element name="OtherUom" type="xsd:string"/>
+                    <xsd:element name="Ebq" type="xsd:string"/>
+                    <xsd:element name="PanSize" type="xsd:string"/>
+                    <xsd:element name="EccConsumption" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ComVersion" type="xsd:string"/>
+                    <xsd:element name="ComRelease" type="xsd:string"/>
+                    <xsd:element name="SequenceNum" type="xsd:string"/>
+                    <xsd:element name="StructureOnDate" type="xsd:string"/>
+                    <xsd:element name="StructureOffDate" type="xsd:string"/>
+                    <xsd:element name="OpOffsetFlag" type="xsd:string"/>
+                    <xsd:element name="OperationOffset" type="xsd:string"/>
+                    <xsd:element name="QtyPer" type="xsd:string"/>
+                    <xsd:element name="ScrapPercentage" type="xsd:string"/>
+                    <xsd:element name="ScrapQuantity" type="xsd:string"/>
+                    <xsd:element name="SoOptionFlag" type="xsd:string"/>
+                    <xsd:element name="SoPrintFlag" type="xsd:string"/>
+                    <xsd:element name="InclScrapFlag" type="xsd:string"/>
+                    <xsd:element name="ReasonForChange" type="xsd:string"/>
+                    <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                    <xsd:element name="InclKitIssues" type="xsd:string"/>
+                    <xsd:element name="CreateSubJob" type="xsd:string"/>
+                    <xsd:element name="WetWeightPercent" type="xsd:string"/>
+                    <xsd:element name="IncludeBatch" type="xsd:string"/>
+                    <xsd:element name="IncludeFromJob" type="xsd:string"/>
+                    <xsd:element name="IncludeToJob" type="xsd:string"/>
+                    <xsd:element name="ComMaterial" type="xsd:string"/>
+                    <xsd:element name="ComSubContractCost" type="xsd:string"/>
+                    <xsd:element name="ComLabour" type="xsd:string"/>
+                    <xsd:element name="ComFixedOverHead" type="xsd:string"/>
+                    <xsd:element name="ComVariableOverHead" type="xsd:string"/>
+                    <xsd:element name="ComponentCostTotal" type="xsd:string"/>
+                    <xsd:element name="IconOpen" type="xsd:string"/>
+                    <xsd:element name="IconClosed" type="xsd:string"/>
+                    <xsd:element name="SubAssembly" minOccurs="0" maxOccurs="unbounded">
+                      <xsd:complexType>
+                        <xsd:sequence>
+                          <xsd:element name="Component" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Component" type="xsd:string"/>
+                                <xsd:element name="Description" type="xsd:string"/>
+                                <xsd:element name="LongDesc" type="xsd:string"/>
+                                <xsd:element name="PartCategory" type="xsd:string"/>
+                                <xsd:element name="StockUom" type="xsd:string"/>
+                                <xsd:element name="AlternateUom" type="xsd:string"/>
+                                <xsd:element name="OtherUom" type="xsd:string"/>
+                                <xsd:element name="Ebq" type="xsd:string"/>
+                                <xsd:element name="PanSize" type="xsd:string"/>
+                                <xsd:element name="EccConsumption" type="xsd:string" minOccurs="0"/>
+                                <xsd:element name="ComVersion" type="xsd:string"/>
+                                <xsd:element name="ComRelease" type="xsd:string"/>
+                                <xsd:element name="SequenceNum" type="xsd:string"/>
+                                <xsd:element name="StructureOnDate" type="xsd:string"/>
+                                <xsd:element name="StructureOffDate" type="xsd:string"/>
+                                <xsd:element name="OpOffsetFlag" type="xsd:string"/>
+                                <xsd:element name="OperationOffset" type="xsd:string"/>
+                                <xsd:element name="QtyPer" type="xsd:string"/>
+                                <xsd:element name="ScrapPercentage" type="xsd:string"/>
+                                <xsd:element name="ScrapQuantity" type="xsd:string"/>
+                                <xsd:element name="SoOptionFlag" type="xsd:string"/>
+                                <xsd:element name="SoPrintFlag" type="xsd:string"/>
+                                <xsd:element name="InclScrapFlag" type="xsd:string"/>
+                                <xsd:element name="ReasonForChange" type="xsd:string"/>
+                                <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                                <xsd:element name="InclKitIssues" type="xsd:string"/>
+                                <xsd:element name="CreateSubJob" type="xsd:string"/>
+                                <xsd:element name="WetWeightPercent" type="xsd:string"/>
+                                <xsd:element name="IncludeBatch" type="xsd:string"/>
+                                <xsd:element name="IncludeFromJob" type="xsd:string"/>
+                                <xsd:element name="IncludeToJob" type="xsd:string"/>
+                                <xsd:element name="ComMaterial" type="xsd:string"/>
+                                <xsd:element name="ComSubContractCost" type="xsd:string"/>
+                                <xsd:element name="ComLabour" type="xsd:string"/>
+                                <xsd:element name="ComFixedOverHead" type="xsd:string"/>
+                                <xsd:element name="ComVariableOverHead" type="xsd:string"/>
+                                <xsd:element name="ComponentCostTotal" type="xsd:string"/>
+                                <xsd:element name="IconOpen" type="xsd:string"/>
+                                <xsd:element name="IconClosed" type="xsd:string"/>
+                                <xsd:element name="SubAssembly" minOccurs="0" maxOccurs="unbounded">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="Component" minOccurs="0" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Component" type="xsd:string"/>
+                                            <xsd:element name="Description" type="xsd:string"/>
+                                            <xsd:element name="LongDesc" type="xsd:string"/>
+                                            <xsd:element name="PartCategory" type="xsd:string"/>
+                                            <xsd:element name="StockUom" type="xsd:string"/>
+                                            <xsd:element name="AlternateUom" type="xsd:string"/>
+                                            <xsd:element name="OtherUom" type="xsd:string"/>
+                                            <xsd:element name="Ebq" type="xsd:string"/>
+                                            <xsd:element name="PanSize" type="xsd:string"/>
+                                            <xsd:element name="ComVersion" type="xsd:string"/>
+                                            <xsd:element name="ComRelease" type="xsd:string"/>
+                                            <xsd:element name="SequenceNum" type="xsd:string"/>
+                                            <xsd:element name="StructureOnDate" type="xsd:string"/>
+                                            <xsd:element name="StructureOffDate" type="xsd:string"/>
+                                            <xsd:element name="OpOffsetFlag" type="xsd:string"/>
+                                            <xsd:element name="OperationOffset" type="xsd:string"/>
+                                            <xsd:element name="QtyPer" type="xsd:string"/>
+                                            <xsd:element name="ScrapPercentage" type="xsd:string"/>
+                                            <xsd:element name="ScrapQuantity" type="xsd:string"/>
+                                            <xsd:element name="SoOptionFlag" type="xsd:string"/>
+                                            <xsd:element name="SoPrintFlag" type="xsd:string"/>
+                                            <xsd:element name="InclScrapFlag" type="xsd:string"/>
+                                            <xsd:element name="ReasonForChange" type="xsd:string"/>
+                                            <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                                            <xsd:element name="InclKitIssues" type="xsd:string"/>
+                                            <xsd:element name="CreateSubJob" type="xsd:string"/>
+                                            <xsd:element name="WetWeightPercent" type="xsd:string"/>
+                                            <xsd:element name="IncludeBatch" type="xsd:string"/>
+                                            <xsd:element name="IncludeFromJob" type="xsd:string"/>
+                                            <xsd:element name="IncludeToJob" type="xsd:string"/>
+                                            <xsd:element name="ComMaterial" type="xsd:string"/>
+                                            <xsd:element name="ComSubContractCost" type="xsd:string"/>
+                                            <xsd:element name="ComLabour" type="xsd:string"/>
+                                            <xsd:element name="ComFixedOverHead" type="xsd:string"/>
+                                            <xsd:element name="ComVariableOverHead" type="xsd:string"/>
+                                            <xsd:element name="ComponentCostTotal" type="xsd:string"/>
+                                            <xsd:element name="IconOpen" type="xsd:string"/>
+                                            <xsd:element name="IconClosed" type="xsd:string"/>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                      <xsd:element name="Operation" minOccurs="0" maxOccurs="unbounded">
+                                        <xsd:complexType>
+                                          <xsd:sequence>
+                                            <xsd:element name="Operation" type="xsd:string"/>
+                                            <xsd:element name="WorkCentre" type="xsd:string"/>
+                                            <xsd:element name="Description" type="xsd:string"/>
+                                            <xsd:element name="TimeUom" type="xsd:string"/>
+                                            <xsd:element name="ProductClass" type="xsd:string"/>
+                                            <xsd:element name="WcRateInd" type="xsd:string"/>
+                                            <xsd:element name="WhatIfWcInd" type="xsd:string"/>
+                                            <xsd:element name="SubcontractFlag" type="xsd:string"/>
+                                            <xsd:element name="ISetUpTime" type="xsd:string"/>
+                                            <xsd:element name="IRunTime" type="xsd:string"/>
+                                            <xsd:element name="IStartupTime" type="xsd:string"/>
+                                            <xsd:element name="ITeardownTime" type="xsd:string"/>
+                                            <xsd:element name="IWaitTime" type="xsd:string"/>
+                                            <xsd:element name="IStartupQty" type="xsd:string"/>
+                                            <xsd:element name="IMachine" type="xsd:string"/>
+                                            <xsd:element name="IUnitCapacity" type="xsd:string"/>
+                                            <xsd:element name="IMaxWorkOpertrs" type="xsd:string"/>
+                                            <xsd:element name="IMaxProdUnits" type="xsd:string"/>
+                                            <xsd:element name="ITimeTaken" type="xsd:string"/>
+                                            <xsd:element name="IQuantity" type="xsd:string"/>
+                                            <xsd:element name="Milestone" type="xsd:string"/>
+                                            <xsd:element name="ElapsedTime" type="xsd:string"/>
+                                            <xsd:element name="MovementTime" type="xsd:string"/>
+                                            <xsd:element name="NarrationCode" type="xsd:string"/>
+                                            <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                                            <xsd:element name="NumOfPieces" type="xsd:string"/>
+                                            <xsd:element name="InspectionFlag" type="xsd:string"/>
+                                            <xsd:element name="OperYieldPct" type="xsd:string"/>
+                                            <xsd:element name="OperYieldQty" type="xsd:string"/>
+                                            <xsd:element name="MinorSetup" type="xsd:string"/>
+                                            <xsd:element name="MinorSetupCode" type="xsd:string"/>
+                                            <xsd:element name="ToolSet" type="xsd:string"/>
+                                            <xsd:element name="ToolSetQty" type="xsd:string"/>
+                                            <xsd:element name="ToolConsumption" type="xsd:string"/>
+                                            <xsd:element name="TimeCalcFlag" type="xsd:string"/>
+                                            <xsd:element name="OprSubContract" type="xsd:string"/>
+                                            <xsd:element name="OprSubContractCost" type="xsd:string"/>
+                                            <xsd:element name="OprLabour" type="xsd:string"/>
+                                            <xsd:element name="OprFixedOverHead" type="xsd:string"/>
+                                            <xsd:element name="OprVariableOverHead" type="xsd:string"/>
+                                            <xsd:element name="OperationCostTotal" type="xsd:string"/>
+                                            <xsd:element name="Narrations" minOccurs="0">
+                                              <xsd:complexType>
+                                                <xsd:sequence>
+                                                  <xsd:element name="Narration" type="xsd:string" maxOccurs="unbounded"/>
+                                                </xsd:sequence>
+                                              </xsd:complexType>
+                                            </xsd:element>
+                                            <xsd:element name="IconOpen" type="xsd:string"/>
+                                            <xsd:element name="IconClosed" type="xsd:string"/>
+                                          </xsd:sequence>
+                                        </xsd:complexType>
+                                      </xsd:element>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                          <xsd:element name="Operation" minOccurs="0" maxOccurs="unbounded">
+                            <xsd:complexType>
+                              <xsd:sequence>
+                                <xsd:element name="Operation" type="xsd:string"/>
+                                <xsd:element name="WorkCentre" type="xsd:string"/>
+                                <xsd:element name="Description" type="xsd:string"/>
+                                <xsd:element name="TimeUom" type="xsd:string"/>
+                                <xsd:element name="ProductClass" type="xsd:string"/>
+                                <xsd:element name="WcRateInd" type="xsd:string"/>
+                                <xsd:element name="WhatIfWcInd" type="xsd:string"/>
+                                <xsd:element name="SubcontractFlag" type="xsd:string"/>
+                                <xsd:element name="ISetUpTime" type="xsd:string"/>
+                                <xsd:element name="IRunTime" type="xsd:string"/>
+                                <xsd:element name="IStartupTime" type="xsd:string"/>
+                                <xsd:element name="ITeardownTime" type="xsd:string"/>
+                                <xsd:element name="IWaitTime" type="xsd:string"/>
+                                <xsd:element name="IStartupQty" type="xsd:string"/>
+                                <xsd:element name="IMachine" type="xsd:string"/>
+                                <xsd:element name="IUnitCapacity" type="xsd:string"/>
+                                <xsd:element name="IMaxWorkOpertrs" type="xsd:string"/>
+                                <xsd:element name="IMaxProdUnits" type="xsd:string"/>
+                                <xsd:element name="ITimeTaken" type="xsd:string"/>
+                                <xsd:element name="IQuantity" type="xsd:string"/>
+                                <xsd:element name="Milestone" type="xsd:string"/>
+                                <xsd:element name="ElapsedTime" type="xsd:string"/>
+                                <xsd:element name="MovementTime" type="xsd:string"/>
+                                <xsd:element name="NarrationCode" type="xsd:string"/>
+                                <xsd:element name="AutoNarrCode" type="xsd:string"/>
+                                <xsd:element name="NumOfPieces" type="xsd:string"/>
+                                <xsd:element name="InspectionFlag" type="xsd:string"/>
+                                <xsd:element name="OperYieldPct" type="xsd:string"/>
+                                <xsd:element name="OperYieldQty" type="xsd:string"/>
+                                <xsd:element name="MinorSetup" type="xsd:string"/>
+                                <xsd:element name="MinorSetupCode" type="xsd:string"/>
+                                <xsd:element name="ToolSet" type="xsd:string"/>
+                                <xsd:element name="ToolSetQty" type="xsd:string"/>
+                                <xsd:element name="ToolConsumption" type="xsd:string"/>
+                                <xsd:element name="TimeCalcFlag" type="xsd:string"/>
+                                <xsd:element name="OprSubContract" type="xsd:string"/>
+                                <xsd:element name="OprSubContractCost" type="xsd:string"/>
+                                <xsd:element name="OprLabour" type="xsd:string"/>
+                                <xsd:element name="OprFixedOverHead" type="xsd:string"/>
+                                <xsd:element name="OprVariableOverHead" type="xsd:string"/>
+                                <xsd:element name="OperationCostTotal" type="xsd:string"/>
+                                <xsd:element name="Narrations">
+                                  <xsd:complexType>
+                                    <xsd:sequence>
+                                      <xsd:element name="Narration" type="xsd:string" maxOccurs="unbounded"/>
+                                    </xsd:sequence>
+                                  </xsd:complexType>
+                                </xsd:element>
+                                <xsd:element name="IconOpen" type="xsd:string"/>
+                                <xsd:element name="IconClosed" type="xsd:string"/>
+                              </xsd:sequence>
+                            </xsd:complexType>
+                          </xsd:element>
+                        </xsd:sequence>
+                      </xsd:complexType>
+                    </xsd:element>
+                    <xsd:element name="FixedQtyPerFlag" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="FixedQtyPer" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ComponentsAttached" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="OperationsAttached" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="LevelErrorMessage" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+              <xsd:element name="AbcElement">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="AbcDirect" type="xsd:string"/>
+                    <xsd:element name="AbcLessDirect" type="xsd:string"/>
+                    <xsd:element name="AbcCumPreProd" type="xsd:string"/>
+                    <xsd:element name="AbcCumManuf" type="xsd:string"/>
+                    <xsd:element name="AbcFactory" type="xsd:string"/>
+                    <xsd:element name="AbcSales" type="xsd:string"/>
+                    <xsd:element name="AbcTotal" type="xsd:string"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
