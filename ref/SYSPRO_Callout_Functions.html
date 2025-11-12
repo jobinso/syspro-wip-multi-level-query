@@ -1,0 +1,1449 @@
+
+<!-- saved from url=(0041)file:///C:/SYSPRO/Base/settings/ADMIN.htm -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
+<style type="text/css">
+table, tr, td, th {border-collapse:collapse;border:0px;font-size:9pt;font-family:Verdana;border:solid 1px #DCDADC;}table {border-top:solid 1px #7CAAEC;}th {background:#3C82DC;font-size:9pt;padding:10px;border:0px;border:solid 1px #7CAAEC;border-bottom:solid 5px #7CAAEC;border-top:solid 5px #7CAAEC;color:#FFFFFF;}h2 {font-family:Georgia;color:#3C82DC;}h3 {font-family:Verdana;color:#3C82DC;font-size:9pt;}.date {color:#1e1e1e;font-size:8pt;}td {padding:5px;}.alt {background:#F6F6F6;}@media print {table, tr, td, th {border-collapse:collapse;border:0px;font-size:9pt;border:solid 1px #000000;}table {border-top:solid 1px #000000;}th {background:#000;font-size:9pt;padding:10px;border:0px;color:#1e1e1e;border:solid 1px #000000;border-bottom:solid 5px #000000;border-top:solid 5px #000000;}th font { color:#fff;}h2 {font-family:georgia;color:#1e1e1e;}.date {color:#1e1e1e;font-size:8pt;}td {padding:1px;}}.text {mso-number-format:"\@";}.datefmt {mso-number-format:"Short Date";}.dec0 {mso-number-format:"0";}.dec1 {mso-number-format:"0\.0";}.dec2 {mso-number-format:"0\.00";}.dec3 {mso-number-format:"0\.000";}.dec4 {mso-number-format:"0\.0000";}.dec5 {mso-number-format:"0\.00000";}.dec6 {mso-number-format:"0\.000000";}.dec7 {mso-number-format:"0\.0000000";}
+</style><title>SYSPRO</title></head>
+<body><h2 align="center">
+The OUTDOORS Company</h2>
+<h2 align="center">
+SYSPRO Callout Functions</h2>
+<p class="date"><font face="Verdana">Date:2025/04/09   0:47</font>
+<table border="1" width="100%">
+<tbody><tr>
+<th align="left">Callout function                        </th>
+<th align="left">Syntax                                  </th>
+<th align="left">Remarks                                 </th>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Browser callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Navigate to a web address</td>
+<td nowrap="on" align="left">(WebAddress, "xxxxxxxx", "URL")</td>
+<td nowrap="on" align="left">The web address must be valid.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get web address</td>
+<td nowrap="on" align="left">(WebGetAddress, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the current URL.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get web name</td>
+<td nowrap="on" align="left">(WebGetName, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the current name.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Go back</td>
+<td nowrap="on" align="left">(WebBack, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">During a browsing session, the WebBrowser control maintains a history of Web sites visited during a session.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Go forward</td>
+<td nowrap="on" align="left">(WebForward, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">During a browsing session, the WebBrowser control maintains a history of Web sites visited during a session.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh web page</td>
+<td nowrap="on" align="left">(WebRefresh, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Reloads the web page.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Chart callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Populate a chart</td>
+<td nowrap="on" align="left">(ChartPopulate, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax:<br>&lt;Chart&gt;&lt;Series1&gt;&lt;Points&gt;<br>&lt;Point Label="xxx" Value="nnn" /&gt;<br>&lt;/Points&gt;&lt;/Series1&gt;&lt;/Chart&gt;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Common callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show a Task Dialog</td>
+<td nowrap="on" align="left">(TaskDialog, " ", "&lt;Msg&gt;&lt;Title&gt;&lt;/Title&gt;&lt;Text&gt;&lt;/Text&gt;&lt;/Msg&gt;")</td>
+<td nowrap="on" align="left">Returns the ID of the button clicked followed by the radio button ID and input text, each separated by the TAB character.<br>
+Example:  100 101 Hello Worl<br>
+Button ID return values: OK=1, Yes=2, No=4, Cancel(Esc)=8, Retry=16, Close=32<br>
+Custom button and radio button IDs are numbered from 100 upwards.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Close the application</td>
+<td nowrap="on" align="left">(CloseApp, " ", " ")</td>
+<td nowrap="on" align="left">After the script exits, the application will close.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get the application title</td>
+<td nowrap="on" align="left">(GetTitle, " ", " ")</td>
+<td nowrap="on" align="left">Returns the application title.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show a dialog box</td>
+<td nowrap="on" align="left">(ShowDialogBox, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Requires the name of a control to be shown as a dialog box. The option 'Show pane as dialog box' must be checked.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Close a dialog box</td>
+<td nowrap="on" align="left">(CloseDialogBox, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Closes a currently open dialog box.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show a modal window in SYSPRO Web UI</td>
+<td nowrap="on" align="left">(ShowModalWindow, "modal ID", " ")</td>
+<td nowrap="on" align="left">Requires the ID of the modal window. This callout will only be executed when running in SYSPRO Web UI. See also event 'ModalWindowClose'.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Close a modal window in SYSPRO Web UI</td>
+<td nowrap="on" align="left">(CloseModalWindow, "modal ID", " ")</td>
+<td nowrap="on" align="left">Requires the ID of the modal window. This callout will only be executed when running in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show busy</td>
+<td nowrap="on" align="left">(ShowBusy, " ", " ")</td>
+<td nowrap="on" align="left">Changes the WAIT cursor to indicate the application is busy, or shows a 'busy' marquee in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show ready</td>
+<td nowrap="on" align="left">(ShowReady, " ", " ")</td>
+<td nowrap="on" align="left">Shows the ARROW cursor to indicate the application is ready, or removes the 'busy' marquee in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show the SYSPRO program loading message</td>
+<td nowrap="on" align="left">(ShowSYSPROLoading, " ", " ")</td>
+<td nowrap="on" align="left">Shows the animated SYSPRO gif, typically used to indicate a program is loading. The animation will automatically close after a few seconds.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show a progress bar</td>
+<td nowrap="on" align="left">(ShowProgressBar, " ", "Title|Message")</td>
+<td nowrap="on" align="left">Shows a progress bar. Typically used for long-running scripts. The progress bar window has a Title and a Message.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Cancel a progress bar</td>
+<td nowrap="on" align="left">(CancelProgressBar, " ", " ")</td>
+<td nowrap="on" align="left">Cancels the progress bar.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh a progress bar</td>
+<td nowrap="on" align="left">(RefreshProgressBar, " ", "new message")</td>
+<td nowrap="on" align="left">Refreshes the progress bar message.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get company Setup options</td>
+<td nowrap="on" align="left">(GetSetupOptions, " ", "key")</td>
+<td nowrap="on" align="left">Returns company Setup options (by module) as a XML string. The KEY is the module name (such as ARS, APS etc.). You will be shown a list of module names to select from.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a variable</td>
+<td nowrap="on" align="left">(SetVariable, "variable name", string)</td>
+<td nowrap="on" align="left">Sets a named variable string. These variables persist for the duration of the run of the application. A variable name cannot exceed 20 characters long. The string may be of any length.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get a variable</td>
+<td nowrap="on" align="left">(GetVariable, "variable name", " ")</td>
+<td nowrap="on" align="left">Returns a named variable string.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a global variable</td>
+<td nowrap="on" align="left">(SetGlobalVariable, "variable name", string)</td>
+<td nowrap="on" align="left">Sets a named global variable string. These variables persist for the duration of SYSPRO. A variable name cannot exceed 20 characters long. The string may be of any length.<br>
+It is recommended to prefix your variable name with your application name or part thereof to uniquely identify it.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get a global variable</td>
+<td nowrap="on" align="left">(GetGlobalVariable, "variable name", " ")</td>
+<td nowrap="on" align="left">Returns a named global variable string.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get application parameter</td>
+<td nowrap="on" align="left">(GetAppParameter, " ", " ")</td>
+<td nowrap="on" align="left">Returns the value that was passed as a parameter to the application.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Send email</td>
+<td nowrap="on" align="left">(Email, " ", EmailXML)</td>
+<td nowrap="on" align="left">Send an email with optional attachment.<br>
+General syntax<br>&lt;Email&gt;&lt;Subject&gt; &lt;/Subject&gt;&lt;To&gt; &lt;/To&gt;&lt;Cc/&gt;&lt;Message&gt; &lt;/Message&gt;&lt;Attachment&gt; &lt;/Attachment&gt;&lt;/Email&gt;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Write to Tracer</td>
+<td nowrap="on" align="left">(WriteToTracer, " ", "tracer message")</td>
+<td nowrap="on" align="left">Write a record to the Application Designer Tracer facility.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh a tile in a Web View</td>
+<td nowrap="on" align="left">(RefreshTile, " ", "tile name")</td>
+<td nowrap="on" align="left">Forces a named tile to be refreshed. Leave blank if all tiles are to be refreshed.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Optimize SYSPRO Web UI performance</td>
+<td nowrap="on" align="left">(BeginWebViewUpdate, " ", " ")</td>
+<td nowrap="on" align="left">Prevents any callouts being sent to SYSPRO Web UI until the 'EndWebViewUpdate' callout.<br>
+This mechanism can improve the performance of refreshing a Web View<br>
+The callout will be ignored if not in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Commit SYSPRO Web UI callouts</td>
+<td nowrap="on" align="left">(EndWebViewUpdate, " ", " ")</td>
+<td nowrap="on" align="left">When the EndWebViewUpdate callout is executed any forms, toolbars or charts that were requiring to be refreshed will now be refreshed.<br>
+The callout will be ignored if not in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get a datastore variable</td>
+<td nowrap="on" align="left">(GetDatastoreVariable, " ", "key")</td>
+<td nowrap="on" align="left">Returns the value of the KEY from the secure datastore. If the KEY is invalid then the value returned will begin with ERROR:.<br>
+Typically this would be used to retrieve credentials.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Raise an event on a toolbar</td>
+<td nowrap="on" align="left">(RaiseToolbarEvent, "toolbarName", "button ID")</td>
+<td nowrap="on" align="left">Execute a specified toolbar and button ID. This may be useful when exiting an application to execute a button on the calling application.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Return a browse value</td>
+<td nowrap="on" align="left">(ReturnBrowseValue, " ", "value")</td>
+<td nowrap="on" align="left">Return a specified value to the calling program's current field. Note that the application will immediately close.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get application information</td>
+<td nowrap="on" align="left">(GetAppInfo, " ", " ")</td>
+<td nowrap="on" align="left">Returns the details about the running application.<br>
+Xml format:<br>&lt;AppInfo&gt;&lt;Author&gt; &lt;/Author&gt;&lt;ReleaseVersion&gt; &lt;/ReleaseVersion&gt;&lt;Notes&gt; &lt;/Notes&gt;&lt;Category&gt; &lt;/Category&gt;&lt;Apptitle&gt; &lt;/Apptitle&gt; &lt;/AppInfo&gt;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to a tab page in SYSPRO WebUI</td>
+<td nowrap="on" align="left">(SetFocusTabPage, " ", "Tab.Caption")</td>
+<td nowrap="on" align="left">Requires the caption of the tab page. This callout will only be executed when running in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Data Source Callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Execute a data source</td>
+<td nowrap="on" align="left">(DataSourceExecute, "data source name", "key,key2,key3...")</td>
+<td nowrap="on" align="left">Executes the data source using the Key(s) and returns the data. Up to 9 keys may be entered (separated by a comma) and will replace the placeholders %key%, %key2%, %key3%... .<br>"0" will be returned if the data source did not execute successfully.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh data from a data source</td>
+<td nowrap="on" align="left">(DataSourceRefresh, "data source name", "key,key2,key3...")</td>
+<td nowrap="on" align="left">Executes the data source using the Key(s) and refreshes the fields associated with the data source. Up to 9 keys may be entered (separated by a comma) and will replace the placeholders %key%, %key2%, %key3%... .<br>"0" will be returned if the data source did not execute successfully.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Execute a data source with SQL statement</td>
+<td nowrap="on" align="left">(DataSourceExecuteSQL, "data source name", SQLStatement)</td>
+<td nowrap="on" align="left">Executes the custom data source using the supplied SQL statement and returns the data.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Execute a data source with document</td>
+<td nowrap="on" align="left">(DataSourceExecuteXMLDoc, "data source name", xmlDocument)</td>
+<td nowrap="on" align="left">Executes the transactional Business Object data source using the supplied XML document string and returns the data.<br>"0" will be returned if the data source did not execute successfully.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get the XML document</td>
+<td nowrap="on" align="left">(DataSourceGetXMLDoc, "data source name", " ")</td>
+<td nowrap="on" align="left">Returns the content of the XML document for a transactional business object. While you can get at this document content in the OnBeforeTransaction event, you may need to get and view the content before executing the data source.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Validate a KEY value</td>
+<td nowrap="on" align="left">(DataSourceValidateKey, "tableName or eventID", KEY + "|xml node|%key% not on file")</td>
+<td nowrap="on" align="left">Returns a status indicating a KEY is valid.<br>
+The KEY can be validated against a TableName (such as ArCustomer) or an EventID (such as 38000 indicating the Customer key)<br>
+Return values can be DataSourceKeyValid, DataSourceKeyInvalid,"{1}" (invalid table name) or "{2}" (invalid eventID).<br>
+Optionally you can supply the XML node to be returned from the TableName, in which case it will be the XML node v</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Change the type of transaction</td>
+<td nowrap="on" align="left">(DataSourceSetupType, "data source name", "xxxxxx")</td>
+<td nowrap="on" align="left">Changes the type of transaction for a data source associated with a transaction 'Setup' Business Object. The type (Add, Update or Delete) can be selected from the popup list shown.<br>
+Note that this changes the type for the duration of the applicaton.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set the URL for a Web Service</td>
+<td nowrap="on" align="left">(DataSourceWebSetURL, "data source name", URL)</td>
+<td nowrap="on" align="left">Sets the URL for a web service data source.<br>
+Note that this changes the URL for the duration of the applicaton.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set the body content for a Web Service</td>
+<td nowrap="on" align="left">(DataSourceWebSetBody, "data source name", BodyContent)</td>
+<td nowrap="on" align="left">Sets the body content for a web service data source.<br>
+Note that this changes the Body value for the duration of the applicaton.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set a header for a Web Service</td>
+<td nowrap="on" align="left">(DataSourceWebSetHttpHeader, "data source name", "header key|value")</td>
+<td nowrap="on" align="left">Sets a header key and value for a web service data source. If the header key does not exist it will be added to the list of headers.<br>
+Note that this changes the Header for the duration of the applicaton.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get the properties for a Web Service</td>
+<td nowrap="on" align="left">(DataSourceWebGetProperties, "data source name", " ")</td>
+<td nowrap="on" align="left">Returns the properties of the data source as an XML string.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get the URL for a Web Service</td>
+<td nowrap="on" align="left">(DataSourceWebGetURL, "data source name", " ")</td>
+<td nowrap="on" align="left">Returns just the URL of the web service.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Docking pane callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Change a docking pane title</td>
+<td nowrap="on" align="left">(PaneChangeTitle, "xxxxxxxx", "new title")</td>
+<td nowrap="on" align="left">This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a docking pane tooltip</td>
+<td nowrap="on" align="left">(PaneChangeTooltip, "xxxxxxxx", "new tooltip")</td>
+<td nowrap="on" align="left">The tooltip may be constructed using XAML.<br>
+This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show a docking pane</td>
+<td nowrap="on" align="left">(PaneShow, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Shows a hidden pane. This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Hide a docking pane</td>
+<td nowrap="on" align="left">(PaneHide, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Hides a pane. This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Open a docking pane</td>
+<td nowrap="on" align="left">(PaneOpen, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Opens a closed pane. This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Close a docking pane</td>
+<td nowrap="on" align="left">(PaneClose, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Closes a pane. This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Select a docking pane</td>
+<td nowrap="on" align="left">(PaneSelect, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Makes a pane the active pane. This will have no effect in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Document Viewer callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show a document</td>
+<td nowrap="on" align="left">(DocumentShow, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Drop Control callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Add filenames to list</td>
+<td nowrap="on" align="left">(DropAddFiles, "xxxxxxxx", "list of files")</td>
+<td nowrap="on" align="left">Requires a list of filenames separated by the ; character.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Form callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to a field</td>
+<td nowrap="on" align="left">(FormFieldSetFocus, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">Leave the caption blank to set focus to the first editable field on the form.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Update a form field value or its properties</td>
+<td nowrap="on" align="left">(FormFieldSetValue, "xxxxxxxx", "caption|string")</td>
+<td nowrap="on" align="left">Requires the name of the form, the caption of the form field and a string (separated by | ).<br>
+The string can be a simple value, or it can be an XML string that changes the field's properties<br>&lt;Field Value='abc' Background='Yellow' Foreground='red' CaptionBackground='blue' CaptionForeground='white' Height='100' CaptionIsBold='true' IsBold='true' IsItalic='true' Icon='nnn' /&gt;<br>
+Colors may be black, blu</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Update all fields on a form</td>
+<td nowrap="on" align="left">(FormUpdateFromXML, "xxxxxxxx", xmlForm)</td>
+<td nowrap="on" align="left">The XML Form string can contain as many form fields for which values and properties are to be updated.<br>
+The form can also be updated with a new set of fields by using the ClearForm='true' attribute, as in&lt;Form ClearForm='true'&gt;.<br>
+The values of all fields in the forms can be cleared using the attribute&lt;Form ClearData='true'&gt;.<br>
+If the XML is not well-formed returnValue will be non-blank and will cont</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh custom form fields</td>
+<td nowrap="on" align="left">(FormRefreshCustomFields, "xxxxxxxx", "key")</td>
+<td nowrap="on" align="left">Refreshes the values of custom or table fields that have been added to the form by the user. This will only work if a custom form type has been associated with the form and if a valid key is supplied.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get a form field value</td>
+<td nowrap="on" align="left">(FormFieldGetValue, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">Returns the value of the form field.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get the properties of a form field</td>
+<td nowrap="on" align="left">(FormFieldGetProperties, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">Returns the properties of the form field.<br>
+Example:Type=Alpha;Visibility=True;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Disable a form field</td>
+<td nowrap="on" align="left">(FormFieldDisable, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Enable a form field</td>
+<td nowrap="on" align="left">(FormFieldEnable, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Enable a form with focus</td>
+<td nowrap="on" align="left">(FormStartEditing, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Enables the form and starts editing at the first editable field on the form.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Enable a form</td>
+<td nowrap="on" align="left">(FormAllowEditing, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Enables the form.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Disable the form</td>
+<td nowrap="on" align="left">(FormStopEditing, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Disables the form.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Change a caption</td>
+<td nowrap="on" align="left">(FormFieldChangeCaption, "xxxxxxxx", "caption|new caption")</td>
+<td nowrap="on" align="left">Requires the name of the form, the caption of the form field and the new caption (separated by | ).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Hide a form field</td>
+<td nowrap="on" align="left">(FormFieldHide, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show a form field</td>
+<td nowrap="on" align="left">(FormFieldShow, "xxxxxxxx", "caption")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear the form of all data</td>
+<td nowrap="on" align="left">(FormClearData, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a form field tooltip</td>
+<td nowrap="on" align="left">(FormFieldSetTooltip, "xxxxxxxx", "caption|new tooltip")</td>
+<td nowrap="on" align="left">Requires the name of the form, the caption of the form field and the new tooltip (separated by | ).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Update dropdown list</td>
+<td nowrap="on" align="left">(FormUpdateDropDown, "xxxxxxxx", "caption|list of items")</td>
+<td nowrap="on" align="left">Requires the name of the form, the caption of the form field and a list of items (separated by | ).<br>
+The items must be separated by the ; character.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Gauge callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Update a gauge</td>
+<td nowrap="on" align="left">(GaugeUpdate, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax:<br>&lt;GaugeArc&gt;&lt;Value&gt;68&lt;/Value&gt;&lt;/GaugeArc&gt;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Image callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Refresh an image</td>
+<td nowrap="on" align="left">(ImageRefresh, "xxxxxxxx", "image path")</td>
+<td nowrap="on" align="left">Requires the file path to the image.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set the caption for the image</td>
+<td nowrap="on" align="left">(ImageCaption, "xxxxxxxx", "new image caption")</td>
+<td nowrap="on" align="left">The caption will appear above the image.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>List view callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Add records to a list view</td>
+<td nowrap="on" align="left">(ListviewAddRecords, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">The XML string can be generated from a business object, or can contain XML elements incorporating properties.<br>
+Example<br>&lt;SalesOrder IsReadOnly='true' Value='840' Background='Blue' Foreground='white' IsItalic='true' IsBold='true'/&gt;<br>
+Colors may be black, blue, brown, cyan, darkblue, darkcyan, darkgray, darkgreen, darkmagenta, darkred, gray, green, lightblue, lightcyan, lightgreen, lightmagenta, lightr</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear all rows and then add records to a list view</td>
+<td nowrap="on" align="left">(ListviewClearAddRecords, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">The syntax for the XML string is as for ListviewAddRecords.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Refreshes the list view for Bind Data</td>
+<td nowrap="on" align="left">(ListviewRefreshBindData, "xxxxxxxx", "key")</td>
+<td nowrap="on" align="left">Executes the data source associated with the Bind Data properties for the list view.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear all rows in a list view</td>
+<td nowrap="on" align="left">(ListviewClearGrid, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get all records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetRecords, "xxxxxxxx", "RowIndex=false")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get all 'checked' records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetCheckedRecords, "xxxxxxxx", "nnn|RowIndex=false")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. Returns only records where the check box in the specified column is marked as 'checked'.<br>
+The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get all 'selected' records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetSelectedRecords, "xxxxxxxx", "RowIndex=false")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. Returns only records that are selected.<br>
+The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index<br>
+Note that this callout will not work in SYSPRO Web UI.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get all 'matched' records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetMatchedRecords, "xxxxxxxx", "textToMatch|nnn|RowIndex=false")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. Returns only records where a cell matches the specified text in a specified column.<br>
+The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get all 'sorted' records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetSortedRecords, "xxxxxxxx", "RowIndex=false")</td>
+<td nowrap="on" align="left">Returns zero-based a 2-dimensional array of rows and columns. Returns the records in the current sorted order.<br>
+The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get all 'changed' records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetChangedRecords, "xxxxxxxx", "RowIndex=false")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. Returns only records that have changed.<br>
+The cell values in each row are separated by a TAB delimiter. If the parameter RowIndex is set to true then the first cell value will contain the row index.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get all child records in a list view</td>
+<td nowrap="on" align="left">(ListviewGetChildRecords, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Returns a zero-based 2-dimensional array of rows and columns. Returns the child records of a specified parent row.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get records as XML</td>
+<td nowrap="on" align="left">(ListviewGetRecordsAsXML, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the records in XML format. The column captions are used as the XML element names.<br>
+Example output:&lt;Records&gt;&lt;Record RowIndex='1'&gt;&lt;SalesOrder&gt;000793&lt;/SalesOrder&gt;&lt;/Record&gt;&lt;/Records&gt;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Update records as XML</td>
+<td nowrap="on" align="left">(ListviewUpdateRecords, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">Updates records in XML format. The XML element names must be column captions, or you can specify a specific Column.<br>
+Example input:&lt;Records&gt;&lt;Record RowIndex'1'&gt;&lt;SalesOrder Column='nn' Icon='nnn' Tooltip='new tooltip' &gt;000793&lt;/SalesOrder&gt;&lt;/Record&gt;&lt;/Records&gt;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get selected row</td>
+<td nowrap="on" align="left">(ListviewGetSelectedRow, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the currently selected row with the row index followed by a TAB character and then all cell values separated by a TAB character.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Checks if the grid changed</td>
+<td nowrap="on" align="left">(ListviewCheckForChanges, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns a numeric value.<br>
+0 No change<br>
+1 Records have change<br>
+2 Records have been inserted</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Update a row</td>
+<td nowrap="on" align="left">(ListviewUpdateRow, "xxxxxxxx", "nnnn|cell values")</td>
+<td nowrap="on" align="left">Updates a row using a row index and cell values separated by a TAB character.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Update a cell in 'selected' row</td>
+<td nowrap="on" align="left">(ListviewUpdateCell, "xxxxxxxx", "nnn|text")</td>
+<td nowrap="on" align="left">Updates the cell in column nnn with the specified text for the currently selected row.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get specific row</td>
+<td nowrap="on" align="left">(ListviewGetRow, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Returns the row at row index nnnn with cell values separated by a TAB character.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Delete selected row</td>
+<td nowrap="on" align="left">(ListviewDeleteSelectedRow, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Deletes the currently selected row(s).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Delete row at</td>
+<td nowrap="on" align="left">(ListviewDeleteRowAt, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Deletes the row at row index nnnn.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Disable list view</td>
+<td nowrap="on" align="left">(ListviewDisable, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Disables the list view.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Enable list view</td>
+<td nowrap="on" align="left">(ListviewEnable, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Enables the list view.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Make columns editable</td>
+<td nowrap="on" align="left">(ListviewCellsEditable, "xxxxxxxx", "nnnn|list")</td>
+<td nowrap="on" align="left">Makes one or more columns editable for a specific row. The list contains column numbers separated by a comma.<br>
+Example<br>
+CallSYSPROFunction(ListviewCellsEditable,"CUS001L0", "2|4,5")<br>
+This will make columns 4 and 5 in row 2 editable.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Make columns not editable</td>
+<td nowrap="on" align="left">(ListviewCellsNotEditable, "xxxxxxxx", "nnnn|list")</td>
+<td nowrap="on" align="left">Makes one or more columns not editable for a specific row. Same syntax as for ListviewCellsEditable.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Make all columns editable</td>
+<td nowrap="on" align="left">(ListviewAllCellsEditable, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Makes all columns editable for a specific row.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Make all columns not editable</td>
+<td nowrap="on" align="left">(ListviewAllCellsNotEditable, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Makes all columns not editable for a specific row.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Hide a column</td>
+<td nowrap="on" align="left">(ListviewHideColumn, "xxxxxxxx", "nnn")</td>
+<td nowrap="on" align="left">Hides a specific column in a list view and removes the column from the Field Chooser.<br>
+This is useful if a specific column is to be ‘hidden’ because of some security setting.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show a column</td>
+<td nowrap="on" align="left">(ListviewShowColumn, "xxxxxxxx", "nnn")</td>
+<td nowrap="on" align="left">Shows a specific column in a list view.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Hides columns</td>
+<td nowrap="on" align="left">(ListviewHideColumns, "xxxxxxxx", "nnn")</td>
+<td nowrap="on" align="left">Removes columns from the list view. All columns from the specified column will be hidden. All columns numbered before the specified column will be shown.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to the list view</td>
+<td nowrap="on" align="left">(ListviewSetFocus, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Sets focus to the list view.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to a row</td>
+<td nowrap="on" align="left">(ListviewSetFocusRow, "xxxxxxxx", "nnnn")</td>
+<td nowrap="on" align="left">Sets the specified row to be selected.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get footer values</td>
+<td nowrap="on" align="left">(ListviewGetFooterValues, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the values in footer columns, separated by TAB.<br>
+The returned format is  nnn:xxxx , where nnn is the column index and xxxx is the footer text.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Begin edit at</td>
+<td nowrap="on" align="left">(ListviewBeginEditAt, "xxxxxxxx", "nnn|row")</td>
+<td nowrap="on" align="left">Starts editing at the specified column and row index. The list view must be editable.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get row count</td>
+<td nowrap="on" align="left">(ListviewGetRowCount, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the number of rows.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a dropdown list for a column</td>
+<td nowrap="on" align="left">(ListviewSetDropDownList, "xxxxxxxx", "nnn|list")</td>
+<td nowrap="on" align="left">This sets the list of constraints for the specified column. The items in the list must be separated by a semi-colon. Optionally, you can define numeric enumerators for each item using the [nn] syntax, for example:<br>
+England[0];Canada[1];America[2];Australia[3]<br>
+If enumerators are not supplied, then the items will be numbered from 1 upwards.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get the page size</td>
+<td nowrap="on" align="left">(ListviewGetPageSize, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the page size selected by the user. This callout should be used if the 'Allow page size' option is switched on and the application needs to know how many rows were selected to be returned to populate the list view. The return value will contain 9999 if 'ALL rows' is selected.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set a translated dropdown list for a column</td>
+<td nowrap="on" align="left">(ListviewSetTranslatedList, "xxxxxxxx", "nnn|list")</td>
+<td nowrap="on" align="left">This sets the list of constraints for the specified column; each item will be translated. The items in the list must be separated by a semi-colon. Optionally, you can define numeric enumerators for each item using the [nn] syntax, for example:<br>
+Stocked[1];Non-stocked[7];Freight charge[4];Miscellaneous charge[5]<br>
+If enumerators are not supplied, then the items will be numbered from 1 upwards.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Change a column header caption</td>
+<td nowrap="on" align="left">(ListviewChangeColumnHeader, "xxxxxxxx", "nnn|new caption")</td>
+<td nowrap="on" align="left">This changes the header caption for the specified column.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Disable a toolbar button</td>
+<td nowrap="on" align="left">(ListviewTbarDisable, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">This disables a button in the list view toolbar.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Enable a toolbar button</td>
+<td nowrap="on" align="left">(ListviewTbarEnable, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">This enables a button in the list view toolbar.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Toggle checkmark state for a toolbar button</td>
+<td nowrap="on" align="left">(ListviewTbarToggle, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">This toggles the checkmark for a button in the list view toolbar.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set checkmark a toolbar button</td>
+<td nowrap="on" align="left">(ListviewTbarSetCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">This sets the checkmark for a button in the list view toolbar.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Unset checkmark a toolbar button</td>
+<td nowrap="on" align="left">(ListviewTbarUnsetCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">This unsets the checkmark for a button in the list view toolbar.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Notepad callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Open a notepad file</td>
+<td nowrap="on" align="left">(NotepadOpenFile, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Open a notepad file for editing</td>
+<td nowrap="on" align="left">(NotepadOpenFileEdit, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Replace notepad text</td>
+<td nowrap="on" align="left">(NotepadReplaceText, "xxxxxxxx", string)</td>
+<td nowrap="on" align="left">This will replace all the text in the notepad with the text string.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Append notepad text</td>
+<td nowrap="on" align="left">(NotepadAppendText, "xxxxxxxx", string)</td>
+<td nowrap="on" align="left">This will append the text string to the notepad.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get notepad text</td>
+<td nowrap="on" align="left">(NotepadGetText, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the notepad text. The return value can be used in a notepad business object.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to the notepad</td>
+<td nowrap="on" align="left">(NotepadSetFocus, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Save the notepad to a file</td>
+<td nowrap="on" align="left">(NotepadSaveFile, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear the notepad</td>
+<td nowrap="on" align="left">(NotepadClear, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set the notepad to be read-only</td>
+<td nowrap="on" align="left">(NotepadReadOnly, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set the notepad to be read-write</td>
+<td nowrap="on" align="left">(NotepadReadWrite, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Checks if the notepad changed</td>
+<td nowrap="on" align="left">(NotepadCheckForChanges, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns 0 (no changes) or 1 (text has changed).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Syntax editor callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Open a text file</td>
+<td nowrap="on" align="left">(SyntaxOpenFile, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Save a text file</td>
+<td nowrap="on" align="left">(SyntaxSaveFile, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Clear text</td>
+<td nowrap="on" align="left">(SyntaxClear, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Clears the text and the Undo buffer.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Insert text</td>
+<td nowrap="on" align="left">(SyntaxInsertText, "xxxxxxxx", text)</td>
+<td nowrap="on" align="left">Inserts text at the current position.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get text</td>
+<td nowrap="on" align="left">(SyntaxGetText, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the text in the editor.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Check for changes</td>
+<td nowrap="on" align="left">(SyntaxCheckForChanges, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns 0 (no changes) or 1 (text has changed).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to syntax editor</td>
+<td nowrap="on" align="left">(SyntaxSetFocus, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Focus is set to row 1, column 1.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set theme</td>
+<td nowrap="on" align="left">(SyntaxSetTheme, "xxxxxxxx", theme)</td>
+<td nowrap="on" align="left">Sets the colorization theme for the syntax editor.<br>
+Theme values may be sql, vbscript, xaml, xml or txt<br>
+Note that setting a theme will clear out any text.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Tag cloud callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Add tag cloud items</td>
+<td nowrap="on" align="left">(TagCloudAddItems, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax (in the same format as a "list" custom data source):<br>&lt;Query&gt; &lt;Row&gt; &lt;TagText&gt;xxxx&lt;/TagText&gt; &lt;TagScore&gt;xxxx&lt;/TagScore&gt; &lt;/Row&gt; &lt;/Query&gt;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Clear tag cloud and populate with new items</td>
+<td nowrap="on" align="left">(TagCloudClearAndPopulate, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax (in the same format as a "list" custom data source):<br>&lt;Query&gt; &lt;Row&gt; &lt;TagText&gt;xxxx&lt;/TagText&gt; &lt;TagScore&gt;xxxx&lt;/TagScore&gt; &lt;/Row&gt; &lt;/Query&gt;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear tag cloud</td>
+<td nowrap="on" align="left">(TagCloudClear, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Toolbar callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to a toolbar entry field</td>
+<td nowrap="on" align="left">(ToolbarSetFocus, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">The toolbar field must be editable.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set checkmark</td>
+<td nowrap="on" align="left">(ToolbarSetCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Unset checkmark</td>
+<td nowrap="on" align="left">(ToolbarUnsetCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get checkmark state</td>
+<td nowrap="on" align="left">(ToolbarGetCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">Returns 1 (checked) or 0 (unchecked).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Toggle checkmark state</td>
+<td nowrap="on" align="left">(ToolbarToggleCheckMark, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">Toggles the checkmark state (if checked, then set unchecked; if unchecked, then set checked).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get value of a toolbar field</td>
+<td nowrap="on" align="left">(ToolbarGetValue, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">Returns the value of the toolbar edit control.<br>
+If it is a combo box control with enumerators, then the enumerator is returned.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set value of a toolbar field</td>
+<td nowrap="on" align="left">(ToolbarSetValue, "xxxxxxxx", "nnnnn|new value")</td>
+<td nowrap="on" align="left">The toolbar field must be an edit control.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set combo box index</td>
+<td nowrap="on" align="left">(ToolbarSetIndexPointer, "xxxxxxxx", "nnnnn|index pointer")</td>
+<td nowrap="on" align="left">This sets a specific list item by index number.<br>
+The toolbar field must be a combo box control.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set combo box index by value</td>
+<td nowrap="on" align="left">(ToolbarSetIndexByValue, "xxxxxxxx", "nnnnn|enumerator")</td>
+<td nowrap="on" align="left">This sets a specific list item using an enumerator.<br>
+The toolbar field must be a combo box control.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Set tooltip of a toolbar field</td>
+<td nowrap="on" align="left">(ToolbarSetTooltip, "xxxxxxxx", "nnnnn|tooltip")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Change the status bar text</td>
+<td nowrap="on" align="left">(ToolbarSetStatusBarText, "xxxxxxxx", "1|text")</td>
+<td nowrap="on" align="left">Requires the section number (1 or 2) and the new text.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Disable a button</td>
+<td nowrap="on" align="left">(ToolbarDisableButton, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Enable a button</td>
+<td nowrap="on" align="left">(ToolbarEnableButton, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Add to end of dropdown list</td>
+<td nowrap="on" align="left">(ToolbarAddToDropDown, "xxxxxxxx", "nnnnn|item caption")</td>
+<td nowrap="on" align="left">The toolbar field must be a combo box control.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Clear and set a dropdown list</td>
+<td nowrap="on" align="left">(ToolbarSetDropDownList, "xxxxxxxx", "nnnnn|list")</td>
+<td nowrap="on" align="left">The toolbar field must be a combo box control.<br>
+The items (max. 200) in the list must be separated by a semi-colon. Optionally, you can define enumerators for each item using the [xxx] syntax. Example<br>
+England[EN];Canada[CA];America[USA];</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show a context menu</td>
+<td nowrap="on" align="left">(ToolbarShowContextMenu, "xxxxxxxx", "nnnnn")</td>
+<td nowrap="on" align="left">Returns the ID of the selected context menu item, or '00000' if no menu item selected.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Check for changes</td>
+<td nowrap="on" align="left">(ToolbarCheckChanges, "tbarname", " ")</td>
+<td nowrap="on" align="left">Returns the status flag for controls that have changed, and shows a Task Dialog to save changes.<br>
+0=No controls change<br>
+2=Cancel presse<br>
+6=Save change<br>
+7=Do not sav<br>
+See also ToolbarResetChangeFlag callout.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Reset change flag</td>
+<td nowrap="on" align="left">(ToolbarResetChangeFlag, "tbarname", " ")</td>
+<td nowrap="on" align="left">Resets the change flag for all controls in this application.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Treeview callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Add items</td>
+<td nowrap="on" align="left">(TreeAddItems, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax:<br>&lt;Items&gt;&lt;Item Parent="nnn" Caption="xxxxx" Value="xxx" HasChildren="Y" Icon="iconID" /&gt;&lt;/Items&gt;<br>
+Use 5 for IconID to indicate children.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Add items using XAML</td>
+<td nowrap="on" align="left">(TreeAddXAMLItems, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">xmlString syntax:<br>&lt;Items&gt;&lt;Item Parent="nnn" XAML="xaml syntax" Caption="xxxxx" Value="xxx" HasChildren="Y" Icon="iconID" /&gt;&lt;/Items&gt;<br>
+Use 5 for IconID to indicate children<br>
+XAML syntax"{TextBlock}{Bold}A000{/Bold} A000 - Bicycle pump ({Run Foreground="Blue" Text="BOX"/}){/TextBlock}"</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Clear the treeview</td>
+<td nowrap="on" align="left">(TreeClear, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set focus to the treeview</td>
+<td nowrap="on" align="left">(TreeFocus, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Disable the treeview</td>
+<td nowrap="on" align="left">(TreeDisable, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Enable the treeview</td>
+<td nowrap="on" align="left">(TreeEnable, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Expand all items</td>
+<td nowrap="on" align="left">(TreeExpandAll, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Expand an item</td>
+<td nowrap="on" align="left">(TreeExpandItem, "xxxxxxxx", NodeIndex)</td>
+<td nowrap="on" align="left">Requires the node index of the item to be expanded.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Delete an item</td>
+<td nowrap="on" align="left">(TreeDeleteItem, "xxxxxxxx", NodeIndex)</td>
+<td nowrap="on" align="left">Requires the node index of the item to be deleted.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Get selected item</td>
+<td nowrap="on" align="left">(TreeGetSelected, "xxxxxxxx", " ")</td>
+<td nowrap="on" align="left">Returns the value and node index separated by | .</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Get number of children</td>
+<td nowrap="on" align="left">(TreeNumberChildren, "xxxxxxxx", NodeIndex)</td>
+<td nowrap="on" align="left">Returns number of children items.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Set an item to be selected</td>
+<td nowrap="on" align="left">(TreeSetSelected, "xxxxxxxx", NodeIndex)</td>
+<td nowrap="on" align="left">Requires the node index of the item to be selected.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Update an item</td>
+<td nowrap="on" align="left">(TreeUpdateItem, "xxxxxxxx", "Node|new caption|new value")</td>
+<td nowrap="on" align="left">Requires the node index, new caption and value - separated by | character.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>User Control callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Execute a user control method</td>
+<td nowrap="on" align="left">(UserExecuteMethod, "xxxxxxxx", "Method|Param1|Param2")</td>
+<td nowrap="on" align="left">Requires the method to execute and optionally 2 parameters - separated by | character.<br>
+The available methods will be shown in a popup after selecting a control.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>XAML callouts</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Show XAML content from a string</td>
+<td nowrap="on" align="left">(XAMLContent, "xxxxxxxx", XAMLstring)</td>
+<td nowrap="on" align="left">The string must contain valid XAML syntax.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Show XAML content from a file</td>
+<td nowrap="on" align="left">(XAMLFile, "xxxxxxxx", filename)</td>
+<td nowrap="on" align="left">The file must contain XAML syntax.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Update XAML template with values</td>
+<td nowrap="on" align="left">(XAMLValues, "xxxxxxxx", xmlString)</td>
+<td nowrap="on" align="left">The syntax for the XML string will depend on the XAML template in use.<br>
+General syntax<br>&lt;Form&gt;&lt;Field Caption="General Information" Type="section" /&gt;&lt;Field Caption="Balance" Value = "$345,567.00" /&gt;&lt;/Form&gt;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left"><b>Event types</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Toolbar event.</td>
+<td nowrap="on" align="left">ToolbarEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Form event.</td>
+<td nowrap="on" align="left">FormEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a List view event.</td>
+<td nowrap="on" align="left">ListviewEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Chart event.</td>
+<td nowrap="on" align="left">ChartEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Tile event.</td>
+<td nowrap="on" align="left">TileEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Web Browser event.</td>
+<td nowrap="on" align="left">WebEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Tag Cloud event.</td>
+<td nowrap="on" align="left">TagCloudEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Treeview event.</td>
+<td nowrap="on" align="left">TreeviewEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Progress Bar event.</td>
+<td nowrap="on" align="left">ProgressBarEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a XAML event.</td>
+<td nowrap="on" align="left">XAMLEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Notepad event.</td>
+<td nowrap="on" align="left">NotepadEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Control Returned event.</td>
+<td nowrap="on" align="left">ControlReturnedEvent</td>
+<td nowrap="on" align="left">This event fires when control execution has returned to the application after another program was called.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Dropped Files event.</td>
+<td nowrap="on" align="left">DroppedFilesEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Indicates a Data Source event.</td>
+<td nowrap="on" align="left">DataSourceEvent</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Events and Event IDs</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a form field value changes.</td>
+<td nowrap="on" align="left">FormValueChanged</td>
+<td nowrap="on" align="left">Param1 contains the form field caption (in lower-case), Param2 contains the changed value and Param3 contains the type of field changed (A=Alpha, B=Check box, D=Date, E=Color, F=Font, I=Picture, 1=Multiline, 2=Spin, 3=Slider, 4=RadioButton, 5=Hyperlink, N=Numeric, L=DropDown, K=DropDownEntry ).<br>
+Example: if EventType = FormEvent and EventID = FormValueChanged then</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a form field hyperlink.</td>
+<td nowrap="on" align="left">FormHyperLink</td>
+<td nowrap="on" align="left">Param1 contains the form field caption (in lower-case).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a form field button.</td>
+<td nowrap="on" align="left">FormButtonClicked</td>
+<td nowrap="on" align="left">Param1 contains the form field caption (in lower-case) and Param2 contains the current field value.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a form field has focus.</td>
+<td nowrap="on" align="left">FormGainFocus</td>
+<td nowrap="on" align="left">Param1 contains the field caption.<br>
+Note that the OnGainFocus event must be checked against the Application Details for this event to fire.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when ENTER pressed.</td>
+<td nowrap="on" align="left">FormENTERPressed</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a list view row is selected.</td>
+<td nowrap="on" align="left">ListRowSelected</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param2 contains the row index.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when right-click on a list view row.</td>
+<td nowrap="on" align="left">ListRowRightClick</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param 2 contains the row index</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when double-click on a list view row.</td>
+<td nowrap="on" align="left">ListRowDoubleClick</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param 2 contains the row index</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a list view cell value changes.</td>
+<td nowrap="on" align="left">ListCellChanged</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param 2 contains the row index<br>
+Param 3 contains the column index (0-based).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a list view hyperlink.</td>
+<td nowrap="on" align="left">ListHyperlinkClicked</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param 2 contains the row index<br>
+Param 3 contains the column index (0-based).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a list view check box is changed.</td>
+<td nowrap="on" align="left">ListCheckBoxChanged</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param 2 contains the row index<br>
+Param 3 contains the column index (0-based).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when the DEL key has been pressed on a list view row.</td>
+<td nowrap="on" align="left">ListDELPressed</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when list view browse button clicked.</td>
+<td nowrap="on" align="left">ListExpandButtonClicked</td>
+<td nowrap="on" align="left">This only occurs for a non-standard browse column. <br>
+Param1 contains the cell value.<br>
+Param2 contains the row index.<br>
+Param3 contains the column index (0-based).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when the first blank row is added to the list view.</td>
+<td nowrap="on" align="left">ListFirstBlankRow</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param2 contains the row index.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a second blank row is added to the list view.</td>
+<td nowrap="on" align="left">ListBlankRowAdded</td>
+<td nowrap="on" align="left">Param1 contains the row with cell values separated by a TAB character.<br>
+Param2 contains the row index.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when the user changes the Number of Rows to page for a list view.</td>
+<td nowrap="on" align="left">ListPageSizeChanged</td>
+<td nowrap="on" align="left">Param1 contains the number of rows.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a toolbar button has focus.</td>
+<td nowrap="on" align="left">ToolbarGainFocus</td>
+<td nowrap="on" align="left">Param1 contains the toolbar ID.<br>
+Note that the OnGainFocus event must be checked against the Application Details for this event to fire.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a chart point.</td>
+<td nowrap="on" align="left">ChartClicked</td>
+<td nowrap="on" align="left">Param1 contains the chart series, Param2 contains the chart point and Param3 contains the chart label.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a tile.</td>
+<td nowrap="on" align="left">TileClicked</td>
+<td nowrap="on" align="left">Param1 contains the Tile caption.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on the message bar button.</td>
+<td nowrap="on" align="left">MessageButtonClicked</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on an href link in a browser page.</td>
+<td nowrap="on" align="left">WebHyperlinkProgram</td>
+<td nowrap="on" align="left">Param1 contains the name of the program to run.<br>
+Param2 can contain any parameters to pass to the program.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on an href link in a browser page.</td>
+<td nowrap="on" align="left">WebHyperlinkExecutable</td>
+<td nowrap="on" align="left">Param1 contains the name of the executable to run.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a tag cloud item.</td>
+<td nowrap="on" align="left">TagSelected</td>
+<td nowrap="on" align="left">Param1 contains the text of the tag.<br>
+Param2 contains the score of the tag.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a treeview item.</td>
+<td nowrap="on" align="left">TreeClicked</td>
+<td nowrap="on" align="left">Param1 contains the value of the item.<br>
+Param2 contains the node index<br>
+Param3 contains 1 (has children) or 0 (no children).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when right-click on a treeview item.</td>
+<td nowrap="on" align="left">TreeRightClick</td>
+<td nowrap="on" align="left">Param1 contains the value of the item.<br>
+Param2 contains the node index<br>
+Param3 contains 1 (has children) or 0 (no children).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when expand parent treeview item.</td>
+<td nowrap="on" align="left">TreeExpand</td>
+<td nowrap="on" align="left">Param1 contains the value of the item.<br>
+Param2 contains the node index<br>
+Param3 contains 1 (has children) or 0 (no children).</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when double-click on a treeview item.</td>
+<td nowrap="on" align="left">TreeDoubleClick</td>
+<td nowrap="on" align="left">Param1 contains the value of the item.<br>
+Param2 contains the node index<br>
+Param3 contains 1 (has children) or 0 (no children).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a XAML hyperlink.</td>
+<td nowrap="on" align="left">XAMLHyperlink</td>
+<td nowrap="on" align="left">Param1 contains the TAG of the hyperlink clicked.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a XAML button.</td>
+<td nowrap="on" align="left">XAMLButton</td>
+<td nowrap="on" align="left">Param1 contains the TAG of the button clicked.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a XAML radio button.</td>
+<td nowrap="on" align="left">XAMLRadioButton</td>
+<td nowrap="on" align="left">Param1 contains the TAG of the radio button clicked.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a XAML check box.</td>
+<td nowrap="on" align="left">XAMLCheckBox</td>
+<td nowrap="on" align="left">Param1 contains the TAG of the check box clicked.<br>
+Param2 contains 1 (is checked) or 0 (is unchecked).</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on a XAML text block.</td>
+<td nowrap="on" align="left">XAMLTextBlock</td>
+<td nowrap="on" align="left">Param1 contains the TAG of the text block clicked.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on YES in 'Save Changes' dialog.</td>
+<td nowrap="on" align="left">ToolbarSaveChanges</td>
+<td nowrap="on" align="left">This can occur when clicking on the toolbar Navigation buttons.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when clicking on CANCEL in 'Save Changes' dialog.</td>
+<td nowrap="on" align="left">ToolbarCancelChanges</td>
+<td nowrap="on" align="left">This can occur when clicking on the toolbar Navigation buttons.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires after a dialog box has closed.</td>
+<td nowrap="on" align="left">DialogBoxClosed</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a dialog box is about to close.</td>
+<td nowrap="on" align="left">DialogBoxClosing</td>
+<td nowrap="on" align="left">This event fires when clicking on the X (close) button or when ESC is pressed. To then actually close the dialog box execute the CloseDialogBox function.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when Notepad SAVE button clicked.</td>
+<td nowrap="on" align="left">NotepadSaved</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when control has returned to the application.</td>
+<td nowrap="on" align="left">ControlReturned</td>
+<td nowrap="on" align="left">This occurs when an application has called a program and after that program exits.<br>
+Param1 contains the name of the program called, and Param2 contains any parameters passed to that program.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when closing a modal window.</td>
+<td nowrap="on" align="left">ModalWindowClose</td>
+<td nowrap="on" align="left">Param1 contains the name of the modal window. This event occurs when closing a modal window in SYSPRO Web UI.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when files are dropped on the Drop Files control.</td>
+<td nowrap="on" align="left">DroppedFiles</td>
+<td nowrap="on" align="left">Param1 contains a collection of filenames, each separated by a TAB character.</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a file is selected in the Drop Files control.</td>
+<td nowrap="on" align="left">DroppedFileSelected</td>
+<td nowrap="on" align="left">Param1 contains the filename selected.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when the list is cleared in the Drop Files control.</td>
+<td nowrap="on" align="left">DroppedFileClearList</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Fires when a KEY in a toolbar has failed validation.</td>
+<td nowrap="on" align="left">ValidateKeyFail</td>
+<td nowrap="on" align="left">This is a Data Source event.<br>
+Param1 contains the toolbar button ID<br>
+Param2 contains the KEY.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Built-in Functions</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Invoke a SYSPRO message box</td>
+<td nowrap="on" align="left">SysproMessageBox("Content", "Title", "Instruction text", SysproButtons.Ok, SysproIcons.None);</td>
+<td nowrap="on" align="left">Invokes a message box and returns an integer id of the button clicked.<br>
+Return integer ids<br>
+0 - Non<br>
+1 - O<br>
+2 - Ye<br>
+4 - N<br>
+8 - Cancel (Esc<br>
+16 - Retr<br>
+32 - Close</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">Invoke a SYSPRO input box</td>
+<td nowrap="on" align="left">SysproInputBox("Content", "Title", "Instruction text", "Default input text", SysproButtons.Ok, SysproIcons.None);</td>
+<td nowrap="on" align="left">Invokes an input box and returns a tuple of the integer id of the button clicked and the text from the input box.<br>
+To access, use the syntax<br>
+returnValue.Button and returnValue.Tex<br>
+Return integer ids<br>
+0 - Non<br>
+1 - O<br>
+2 - Ye<br>
+4 - N<br>
+8 - Cancel (Esc<br>
+16 - Retr<br>
+32 - Close</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">Invoke a SYSPRO debug break</td>
+<td nowrap="on" align="left">SysproDebugBreak();</td>
+<td nowrap="on" align="left">Invokes a debug break. Ensure to save the script in debug mode for this to work.</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left"><b>Enumerables</b></td>
+<td nowrap="on" align="left">&nbsp;</td>
+<td nowrap="on" align="left">&nbsp;</td>
+</tr>
+<tr>
+<td nowrap="on" align="left" style="text-indent: 020px">SysproButtons</td>
+<td nowrap="on" align="left">SysproButtons.None<br>
+SysproButtons.O<br>
+SysproButtons.OkCance<br>
+SysproButtons.YesNoCance<br>
+SysproButtons.YesN<br>
+SysproButtons.Retr<br>
+SysproButtons.RetryCancel</td>
+<td nowrap="on" align="left">Used in SysproMessgeBox and SysproInputBox</td>
+</tr>
+<tr class="alt">
+<td nowrap="on" align="left" style="text-indent: 020px">SysproIcons</td>
+<td nowrap="on" align="left">SysproIcons.None<br>
+SysproIcons.Informatio<br>
+SysproIcons.Warnin<br>
+SysproIcons.Error</td>
+<td nowrap="on" align="left">Used in SysproMessgeBox and SysproInputBox</td>
+</tr>
+</tbody></table>
+</p><p class="date"><font face="Verdana">Number of rows:   261</font>
+
+</p></body></html>
