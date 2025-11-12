@@ -1,0 +1,373 @@
+Option Explicit
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'AppName: SAMTV2
+'Date: 16/11/23
+'Author: Andy Latham
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'This App is an example of how to render a complete BOM in
+'a treview.
+'The sample uses the lazy load technique - i.e. only download a level when the parent
+'is clicked on. This is good for large BOMs where you dont need all the data but it does mean more
+'IO to the server if people are lookimng at lots of levels.
+'The Business Object BOMQRY can return a single level or multiple levels and it returns the Icon to use
+'Look in the Data source section for configuration
+'
+
+'deine contants to make code more readable
+const Tbar_StockCode = "38001"
+const Tbar_Help = "01002"
+const Tbar_Test = "01003"
+
+dim componentnodelist
+dim tviewxml
+dim parentdetails
+
+Function AppDesigner_OnInitialization()
+
+componentnodelist = Null
+
+End Function
+
+
+Function AppDesigner_OnUserEvent(EventType,EventName,EventID,Param1,Param2,Param3)
+
+dim msg
+msg = ""
+msg = msg & "EventType: " & EventType & vbcrlf
+msg = msg & "EventName: " & EventName & vbcrlf
+msg = msg & "EventID: " & EventID & vbcrlf
+msg = msg & "Param1: " & param1 & vbcrlf
+msg = msg & "Param2: " & param2 & vbcrlf
+msg = msg & "Param3: " & param3 & vbcrlf
+
+'msgbox msg
+
+if EventType = ToolbarEvent then
+  select case EventID
+
+    case Tbar_Help
+
+
+    case Tbar_StockCode
+        call CallSYSPROFunction(SyntaxSetFocus, "SAMTV2S0", " ")
+
+        dim xmlstr, toplevelstockcode
+        toplevelstockcode = CallSYSPROFunction(ToolbarGetValue, "SAMTV2TB", "38001")
+        xmlstr =  GetBOMStructure(toplevelstockcode)
+        if xmlstr= "" then
+            call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+            exit function
+        end if
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlstr)
+
+        parentdetails = GetParentDetails(xmlstr)
+        if parentdetails = "" then
+            exit function
+        end if
+
+        tviewxml = "<Items>"
+
+        tviewxml = tviewxml & parentdetails
+
+        set componentnodelist = GetComponents(xmlstr)
+        tviewxml = tviewxml & BuildItemXML(componentnodelist, 1)
+        tviewxml = tviewxml & "</Items>"
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S1", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S1", tviewxml)
+
+        call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+        call CallSYSPROFunction(TreeAddXAMLItems, "SAMTV2X0", tviewxml)
+
+        PopulateListView(toplevelstockcode)
+
+
+
+    case Tbar_Test
+        dim xmlString
+        xmlString = GetDummyData
+        Call CallSYSPROFunction(TreeAddItems, "SAMTV2X0", xmlString)
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlString)
+    case else
+        msgbox "Unkown toolbar eventid : " & EventID
+
+
+  end select
+
+
+end if
+
+'catch treeview events
+if EventType = TreeviewEvent then
+'msgbox msg
+
+    select case EventID
+      case TreeExpand
+         'Param1 has value, param2 has node index, param contains 1 = children = non
+        'need to get part number and node index and get next level
+        xmlstr =  GetBOMStructure(param1)
+        if xmlstr= "" then
+            call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+            exit function
+        end if
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlstr)
+
+
+        dim tviewxml
+        tviewxml = "<Items>"
+
+
+        set componentnodelist = GetComponents(xmlstr)
+        tviewxml = tviewxml & BuildItemXML(componentnodelist, param2)
+                tviewxml = tviewxml & "</Items>"
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S1", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S1", tviewxml)
+
+        call CallSYSPROFunction(TreeAddXAMLItems, "SAMTV2X0", tviewxml)
+
+       PopulateListView(param1)
+
+      case TreeClicked
+        PopulateListView(param1)
+
+
+    end select
+
+
+
+end if
+
+
+
+End Function
+
+
+''''''''''''''''''''''''''
+
+Function PopulateListView(strStockCode)
+'run the data source and populate te list view with the results
+returnValue = CallSYSPROFunction(DataSourceExecute, "BOM components single level", strStockCode)
+call CallSYSPROFunction(ListviewClearAddRecords, "SAMTV2L0", returnValue)
+
+end function
+
+
+
+Function GetBOMStructure(pStockCode)
+'simply execute the data source and return the reult - this runs BOMQRY
+GetBOMStructure = CallSYSPROFunction(DataSourceExecute, "BOM components single level", pStockCode)
+end function
+
+
+
+Function GetParentDetails(XMLStructure)
+'bulds an xml strng that defines the parent part details
+dim xmldom, ParseErr, sErrMsg
+dim m_nodelist,m_node
+
+set xmldom = CreateObject("MSXML2.DOMDocument")
+xmldom.async = "false"
+if not xmldom.loadxml(XMLStructure) then
+   Set ParseErr = xmldom.parseError
+   sErrMsg = "E) XML Parsing Error. " & VbCrLf _
+           & "File: " & ParseErr.url & VbCrLf _
+           & "Reason : " & ParseErr.reason & VbCrLf _
+           & "Line: " & ParseErr.line & VbCrLf _
+           & "Character: " & ParseErr.linepos & VbCrLf _
+           & "Text: " & ParseErr.srcText
+   MsgBox sErrMsg
+   exit function
+end If
+'if we get here we have data in an XML dom
+xmldom.setProperty "SelectionLanguage", "XPath"        'tell dom we are using XPath as the query language rather than XSL
+
+'if we get here then we have the structure loaded into the DOM,
+'now need to get all components
+
+
+set m_node = xmldom.documentElement.selectsinglenode("/BomQuery/Parent")
+
+if m_node is nothing then
+    msgbox "Unable to find <Parent> node"
+        GetParentDetails = ""
+    exit function
+end if
+
+
+dim caption
+dim key
+dim value
+dim icon
+
+caption = m_node.selectsinglenode("StockCode").text
+key = m_node.selectsinglenode("StockCode").text
+value = m_node.selectsinglenode("StockCode").text
+icon = m_node.selectsinglenode("IconOpen").text
+
+
+
+dim strxml
+strxml = strxml & "<Item Parent='0' Caption='" & caption _
+              & "' key='" &  key & "' Value='" & value & "' Icon='" & Icon & "'/>"
+GetParentDetails = strxml
+
+end function
+
+
+
+
+
+Function GetComponents(XMLStructure)
+'get all the components for a parent in an xml string
+dim xmldom, ParseErr, sErrMsg
+dim m_nodelist, m_nocomponents
+
+set xmldom = CreateObject("MSXML2.DOMDocument")
+xmldom.async = "false"
+if not xmldom.loadxml(XMLStructure) then
+   Set ParseErr = xmldom.parseError
+   sErrMsg = "E) XML Parsing Error. " & VbCrLf _
+           & "File: " & ParseErr.url & VbCrLf _
+           & "Reason : " & ParseErr.reason & VbCrLf _
+           & "Line: " & ParseErr.line & VbCrLf _
+           & "Character: " & ParseErr.linepos & VbCrLf _
+           & "Text: " & ParseErr.srcText
+   MsgBox sErrMsg
+   exit function
+end If
+'if we get here we have data in an XML dom
+xmldom.setProperty "SelectionLanguage", "XPath"        'tell dom we are using XPath as the query language rather than XSL
+
+'if we get here then we have the structure loaded into the DOM,
+'now need to get all components
+
+
+set m_nodelist = xmldom.documentElement.selectnodes("//BomQuery/Parent/Component")
+if m_nodelist.length > 0 then
+    m_nocomponents = m_nodelist.Length  'the number of component nodes
+    'msgbox "No. components : " & m_nocomponents
+
+else
+    msgbox "no <Component> elements found"
+end if
+
+'retrun the nodelist
+ set GetComponents = m_nodelist
+
+end function
+
+
+
+
+
+
+'function to take components and build item xml to populate treeview
+Function BuildItemXML(componentnodelist, parentnode)
+
+dim strxml
+dim m_node, m_nodelist, m_node2
+
+set m_nodelist = componentnodelist
+
+dim i, currentnodeindex, currentlevel,  previousnodeindex,previouslevel
+
+dim stockcode
+dim description
+dim sequencenumber
+dim qty
+dim uom
+dim key
+dim value
+dim icon
+dim xaml
+dim haschildren
+
+
+
+'loop over components
+if m_nodelist.length > 0 then
+    for each m_node in m_nodelist
+        stockcode = m_node.selectsinglenode("Component").text
+        description = m_node.selectsinglenode("Description").text
+                sequencenumber = m_node.selectsinglenode("SequenceNum").text
+                qty = m_node.selectsinglenode("QtyPer").text
+                uom = m_node.selectsinglenode("StockUom").text
+        key = m_node.selectsinglenode("Component").text
+        value = m_node.selectsinglenode("Component").text
+                icon = m_node.selectsinglenode("IconOpen").text
+
+        if icon = "4" or icon = "5" then
+            haschildren = "Y"
+        else
+            haschildren = "N"
+        end if
+
+        xaml = "{TextBlock}{Bold}" & sequencenumber & " " & stockcode & "{/Bold} " & description & " ({Run Foreground=""Blue"" Text=""" & qty & " " & uom & """/}){/TextBlock}"
+
+        strxml = strxml & "<Item Parent='" & parentnode & "' HasChildren='" & haschildren &  "' XAML='" & xaml _
+              & "' key='" & key & "' Value='" & value & "' Icon='" & icon & "' />"
+
+    next
+Else
+    msgbox "no elements found"
+end if
+
+BuildItemXML = strxml
+end function
+
+''''''''''''''''''''''''''''''''''''''
+''''''''useful functions
+''''''''''''''''''''''''''''''''''''''
+Function SysproCheckForErrors(strXMLOut)
+'this function checks to see if the XMLOut returned by a Business Object
+'has any erros and returns a formatted string of those errors
+'If there are no errors then it returns an empty string
+
+Dim m_XMLDOC
+Dim nodeList
+Dim errornode
+Dim strError
+Dim i
+
+'create XML DOM object
+Set m_XMLDOC=CreateObject("MSXML2.DOMDocument")
+m_XMLDOC.async="false"
+
+m_XMLDOC.loadXML (strXMLOut)
+Set nodeList = m_XMLDOC.SelectNodes("//ErrorDescription")
+If nodeList.Length = 0 Then
+    SysproCheckForErrors = ""
+Else
+    For Each errornode In nodeList
+        strError = strError & errornode.Text & vbCrLf
+    Next
+    SysproCheckForErrors = strError
+End If
+
+End Function
+
+Function GetDummyData()
+dim strxml
+
+strxml = strxml & "<Items>"
+strxml = strxml & "<Item Parent='0' Caption='my parent' key='B100'/>"
+strxml = strxml & "<Item Parent= '1' Caption='part1' key='A100'/>"
+strxml = strxml & "<Item Parent= '2' Caption='part1.1' key='A100'/>"
+strxml = strxml & "<Item Parent= '2' Caption='part1.2' key='A100'/>"
+strxml = strxml & "<Item Parent= '1' Caption='part2' key='A100'/>"
+
+
+strxml = strxml & "</Items>"
+
+GetDummyData = strxml
+end function
+
+
+ 

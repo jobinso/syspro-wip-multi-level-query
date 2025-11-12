@@ -1,0 +1,536 @@
+[SYSPRO APPLICATION DESIGNER]
+Version=000000001
+Indevelopment=
+WindowSize=M
+Appname=SAMTV2
+Category=
+Apptitle=Bill of Materials Structure Sample2
+AppCheckChanges=
+AppFormGainFocusEvent=
+AppTbarGainFocusEvent=
+ApplicationType=2
+IMPIDEVersion=8.0.034
+Author=
+ValidateStyling=
+AppCreateMainToolbar=1
+CanBeSecured=
+WindowIcon=
+ReleaseVersion=
+LastModified=20250409
+AppShowNotes=
+Statusbar=
+Messagebar=
+MessagebarText=
+MessageCloseButton=
+MessageButtonText=
+ShowModalInAvanti=
+EmbedWebView=
+EncryptApp=
+InitialFocus=Toolbar (Stock code, ID 38001)
+Notes=
+[DOCKING LAYOUT]
+<Layout><Common CompactMode="1"><Summary Panes="23" TopContainer="11" Client="16"/><Pane-1 Type="0" DockingCX="300" DockingCY="300" Title="BOM Structure\n\n" ID="1" DockingHolder="14" LastHolder="14"/><Pane-2 Type="0" DockingCX="302" DockingCY="300" Title="Help\n\n" ID="2" DockingHolder="13" LastHolder="13"/><Pane-3 Type="0" DockingCX="300" DockingCY="300" Title="XMLOut\n\n" ID="3" DockingHolder="17" FloatingHolder="10" LastHolder="17"/><Pane-4 Type="0" DockingCX="300" DockingCY="300" Title="Treeview ItemXML\n\n" ID="4" DockingHolder="17" FloatingHolder="20" LastHolder="17"/><Pane-5 Type="0" DockingCX="300" DockingCY="300" Title="Components\n\n" ID="5" DockingHolder="15" FloatingHolder="23" LastHolder="15"/><Pane-6 Type="5" DockingCX="0" DockingCY="0" Direction="0" Panes="1" Pane-1="7"/><Pane-7 Type="1" DockingCX="302" DockingCY="300" Panes="1" Selected="2" Pane-1="2"/><Pane-8 Type="3" DockingCX="0" DockingCY="0" WindowRectTopPos="850" WindowRectBottomPos="1150" WindowRectLeftPos="466" WindowRectRightPos="766" ExpandedHeight="0" TopContaner="9"/><Pane-9 Type="2" DockingCX="300" DockingCY="300" Horiz="1" Panes="1" Pane-1="10"/><Pane-10 Type="1" DockingCX="300" DockingCY="300" Panes="0"/><Pane-11 Type="2" DockingCX="0" DockingCY="796" Panes="2" Pane-1="12" Pane-2="17"/><Pane-12 Type="2" DockingCX="704" DockingCY="419" Horiz="1" Panes="4" Pane-1="13" Pane-2="14" Pane-3="15" Pane-4="16"/><Pane-13 Type="1" DockingCX="302" DockingCY="300" Panes="0"/><Pane-14 Type="1" DockingCX="266" DockingCY="300" Panes="1" Selected="1" Pane-1="1"/><Pane-15 Type="1" DockingCX="434" DockingCY="300" Panes="1" Selected="5" Pane-1="5"/><Pane-16 Type="4" DockingCX="0" DockingCY="0"/><Pane-17 Type="1" DockingCX="300" DockingCY="376" Panes="2" Selected="3" Pane-1="3" Pane-2="4"/><Pane-18 Type="3" DockingCX="0" DockingCY="0" WindowRectTopPos="758" WindowRectBottomPos="1058" WindowRectLeftPos="470" WindowRectRightPos="770" ExpandedHeight="0" TopContaner="19"/><Pane-19 Type="2" DockingCX="300" DockingCY="300" Horiz="1" Panes="1" Pane-1="20"/><Pane-20 Type="1" DockingCX="300" DockingCY="300" Panes="0"/><Pane-21 Type="3" DockingCX="0" DockingCY="0" WindowRectTopPos="323" WindowRectBottomPos="623" WindowRectLeftPos="502" WindowRectRightPos="802" ExpandedHeight="0" TopContaner="22"/><Pane-22 Type="2" DockingCX="300" DockingCY="300" Horiz="1" Panes="1" Pane-1="23"/><Pane-23 Type="1" DockingCX="300" DockingCY="300" Panes="0"/></Common></Layout>
+[END DOCKING LAYOUT]
+[APPLICATION TOOLBAR]
+<DesignerFile CompactMode="1" Schema="44"><CommandBars><CommandBar Class="CXTPToolBar" BarID="1694431857" Flags="1048577" Style="4194304" Title="Standard" MRUWidth="32767" Closeable="0"><Controls><Control Class="CXTPControlComboBox" Type="5" Id="38001" Caption="&amp;Stock code" TooltipText="Enter Stock code" Style="1" Width="150" Height="0" CommandBarId="16777216"/><Control Class="CXTPControlButton" Id="58001" IconId="156" Caption="Browse" TooltipText="Browse" Style="2" Width="0" Height="0"/><Control Class="CXTPControlButton" Id="1002" IconId="121" Caption="&amp;Help" DescriptionText="dbox=SAMTV2N0;" Style="3" Width="0" Height="0"/></Controls></CommandBar><CommandBar Class="CXTPControlComboBoxList" Type="2" Position="6" BarID="16777216" MRUWidth="0" TearOffWidth="0"/></CommandBars><Layout><DockState Version="44" ScreenSize="1920, 1080" Count="1"><BarInfo0 BarId="1694431857" MRUWidth="32767"/></DockState><DockBars><DockBar0 Count="3" Id1="1694431857"/></DockBars><StatusBar Visible="0"/></Layout><Shortcuts Schema="44"/><Options Theme="12" Schema="44" AlwaysShowFullMenus="0" ShowFullAfterDelay="1" ToolBarScreenTips="1" ToolBarAccelTips="1" LargeIcons="0" Animation="0" SyncFloatingBars="1" ShowExpandButtonAlways="0" IconsSize="0, 0" LargeIconsSize="0, 0" IconsWithShadow="0" UseDisabledIcons="1" UseFadedIcons="0" DblClickFloat="0" ShowTextBelowIcons="0" AltDragCustomization="1" AutoHideUnusedPopups="1" PopupIconsSize="0, 0" KeyboardCuesUse="1" KeyboardCuesShow="2" AutoScaleDpiGalleryItems="1" AutoScaleDpiToolbarIcons="0" AutoScaleDpiToolbarIconsModified="0" ShowPopupButtonsSelectedToolbarOnly="0" Customizable="1"/></DesignerFile>
+[END APPLICATION TOOLBAR]
+[LISTVIEWS]
+[PANE005]
+Name=SAMTV2L0
+DisableCloseButton=0
+DialogBoxSize=S
+Editable=0
+CRAction=
+MultiCheckBoxSelection=
+UnrestrictedDrop=
+ShowAllColumns=
+AvantiRowSelected=
+AvantiShowSelect=
+AvantiShowEdit=
+AvantiShowDelete=
+AvantiDeleteToolbar=
+AvantiAutoDisableColumns=
+AvantiShowCheckBoxes=
+AvantiHyperlinkColumns=
+AvantiDynamicComboBoxes=
+[BIND-DATA]
+BindData=O
+BindDataIfHidden=1
+BindPrimaryNode=Component
+BindPrimaryNodePath=
+BindBusinessObject=
+BindEvent=
+BindControl=
+RowDataSource=
+RowKeyColumn=
+RowShowDialogBox=
+BindDataSource=BOM components single level
+BindXMLFile=
+BindColumn=00Component
+BindColumn=01Description
+BindColumn=02PartCategory
+BindColumn=03StockUom
+BindColumn=04SequenceNum
+BindColumn=05QtyPer
+[END-BIND-DATA]
+<ReportControl Name="SAMTV2L0.XML"><Report  AllowColumnSort="true"  AllowColumnAutoSize="true"  Footer="false"  FreezeColumnCount="0"  HorizontalGridStyle="xtpGridSolid" MultipleSelection="false"  PreviewMode="false"  ShowColumnHeader="true"  SetNoItemstext=""  ShowGroupBox="false"  PreviewTextIndent="0"  TreeIndent="20" TreeStructureStyle="xtpTreeStructureSolid"  VerticalGridStyle="xtpGridNoLines"  UseDBlockLVHeading="false"  DoNotSaveSettings="false"  MultiLineLayout="false"  AutoDisableCheckBox="false"  AutoDeleteWithDel="false"  AutoInsertRow="false"  AutoRowHighlight="false"  EnableDragDrop="false"  ResizeHeight="True" ResizeWidth="True" InitialSortAscending=" "  InitialSortColumn="000"  HasToolbar="false"  AllowPageSize="false"  AddVisibleValuesOnly="false"  ShowPaneCaption="false"  AlwaysShowInplaceButtons="false"  MultiLineHeadings="false"  AutoUndo="false"  DeleteRecords="PhysicalDelete"  ShortenedToolbar="false"  NoInitialRowSelected="false"  InitialGroupColumn="000" PrintLandscape="false"  Heading="Components" />
+<Columns>
+<Column ItemIndex="000" Caption="Component" Width="088" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+<Column ItemIndex="001" Caption="Description" Width="090" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+<Column ItemIndex="002" Caption="Part category" Width="090" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+<Column ItemIndex="003" Caption="Stock uom" Width="095" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+<Column ItemIndex="004" Caption="Sequence num" Width="096" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+<Column ItemIndex="005" Caption="Qty per" Width="099" Icon="-1 " Sortable="True" AllowRemove="True" AllowDrag="True" TreeColumn="False" Resizable="True" Groupable="True" FooterAlignment="xtpAlignmentLeft" HeaderAlignment="xtpAlignmentLeft" ColumnAlignment="xtpAlignmentLeft" FooterText="" DataType="xtpAlpha" Editable="xtpNoteditable" Format="" EditLength="000" BlankWhenZero="false" AutoColumnHide=" " Translate="false" IsCompanyColumn="false" MultiCompanyColumn="false" CopyTextOnInsert="false" CheckBox="xtpNoCheckBox" HasExpandButton="false" CheckDuplicate="false" AddIfInvisible="false" AllowNegative="false" CustomFormID="" CustomPaneID="" EditDecimals="0" PostEvent="xtpNoPostValidateEvent" Visible="xtpVisible" MoveColumnTo=" "/>
+</Columns>
+</ReportControl>
+[END-LISTVIEWS]
+[EDITORS]
+[PANE003]
+Name=SAMTV2S0
+DisableCloseButton=0
+DialogBoxSize=S
+Editorfile=
+Linenumbering=1
+Highlightrow=1
+EditTheme=xml
+Margins=1
+Readonly=
+Showfilename=
+Allowsave=
+Allowopen=
+Allownew=
+[PANE004]
+Name=SAMTV2S1
+DisableCloseButton=0
+DialogBoxSize=S
+Editorfile=
+Linenumbering=1
+Highlightrow=1
+EditTheme=xml
+Margins=1
+Readonly=
+Showfilename=
+Allowsave=
+Allowopen=
+Allownew=
+[END-EDITORS]
+[NOTEPADS]
+[PANE002]
+Name=SAMTV2N0
+Dialogbox=1
+DisableCloseButton=0
+DialogBoxSize=S
+ReadOnly=0
+TextOnly=
+Allowsave=
+Textfile=
+Allowdate=
+SaveContents=1
+RefreshNotepad=
+[NOTEPADCONTENT-000000658]
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang2057{\fonttbl{\f0\fswiss\fprq2\fcharset0 Arial;}{\f1\fnil\fcharset0 Segoe UI;}}  
+{\*\generator Riched20 10.0.20348}\viewkind4\uc1   
+\pard\b\f0\fs22 SAMTVW\b0\par  
+This app is an example of how to display a Bill of Materials in a treeview control.\par  
+\par  
+It uses the \b BOMQRY\b0  business object to get at each single level.\par  
+When a parent is expanded the next level of items is retrieved.\par  
+\par  
+The BOMQRY XMLOut and the XML constructed for each change to the Treeview are displayed in Syntax Editor controls.\par  
+\par  
+A Query datasource is used to populate the listview\par  
+\f1\fs20\par  
+}  
+  
+[END-NOTEPADCONTENT]
+[END-NOTEPADS]
+[TREEVIEWS]
+[PANE001]
+Name=SAMTV2X0
+DisableCloseButton=0
+DialogBoxSize=S
+KeepSorted=
+MultiLevel=
+[END-TREEVIEWS]
+[VBSCRIPT]
+Option Explicit
+
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'AppName: SAMTV2
+'Date: 16/11/23
+'Author: Andy Latham
+''''''''''''''''''''''''''''''''''''''''''''''''''''''
+'This App is an example of how to render a complete BOM in
+'a treview.
+'The sample uses the lazy load technique - i.e. only download a level when the parent
+'is clicked on. This is good for large BOMs where you dont need all the data but it does mean more
+'IO to the server if people are lookimng at lots of levels.
+'The Business Object BOMQRY can return a single level or multiple levels and it returns the Icon to use
+'Look in the Data source section for configuration
+'
+
+'deine contants to make code more readable
+const Tbar_StockCode = "38001"
+const Tbar_Help = "01002"
+const Tbar_Test = "01003"
+
+dim componentnodelist
+dim tviewxml
+dim parentdetails
+
+Function AppDesigner_OnInitialization()
+
+componentnodelist = Null
+
+End Function
+
+
+Function AppDesigner_OnUserEvent(EventType,EventName,EventID,Param1,Param2,Param3)
+
+dim msg
+msg = ""
+msg = msg & "EventType: " & EventType & vbcrlf
+msg = msg & "EventName: " & EventName & vbcrlf
+msg = msg & "EventID: " & EventID & vbcrlf
+msg = msg & "Param1: " & param1 & vbcrlf
+msg = msg & "Param2: " & param2 & vbcrlf
+msg = msg & "Param3: " & param3 & vbcrlf
+
+'msgbox msg
+
+if EventType = ToolbarEvent then
+  select case EventID
+
+    case Tbar_Help
+
+
+    case Tbar_StockCode
+        call CallSYSPROFunction(SyntaxSetFocus, "SAMTV2S0", " ")
+
+        dim xmlstr, toplevelstockcode
+        toplevelstockcode = CallSYSPROFunction(ToolbarGetValue, "SAMTV2TB", "38001")
+        xmlstr =  GetBOMStructure(toplevelstockcode)
+        if xmlstr= "" then
+            call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+            exit function
+        end if
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlstr)
+
+        parentdetails = GetParentDetails(xmlstr)
+        if parentdetails = "" then
+            exit function
+        end if
+
+        tviewxml = "<Items>"
+
+        tviewxml = tviewxml & parentdetails
+
+        set componentnodelist = GetComponents(xmlstr)
+        tviewxml = tviewxml & BuildItemXML(componentnodelist, 1)
+        tviewxml = tviewxml & "</Items>"
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S1", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S1", tviewxml)
+
+        call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+        call CallSYSPROFunction(TreeAddXAMLItems, "SAMTV2X0", tviewxml)
+
+        PopulateListView(toplevelstockcode)
+
+
+
+    case Tbar_Test
+        dim xmlString
+        xmlString = GetDummyData
+        Call CallSYSPROFunction(TreeAddItems, "SAMTV2X0", xmlString)
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlString)
+    case else
+        msgbox "Unkown toolbar eventid : " & EventID
+
+
+  end select
+
+
+end if
+
+'catch treeview events
+if EventType = TreeviewEvent then
+'msgbox msg
+
+    select case EventID
+      case TreeExpand
+         'Param1 has value, param2 has node index, param contains 1 = children = non
+        'need to get part number and node index and get next level
+        xmlstr =  GetBOMStructure(param1)
+        if xmlstr= "" then
+            call CallSYSPROFunction(TreeClear, "SAMTV2X0", " ")
+            exit function
+        end if
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S0", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S0", xmlstr)
+
+
+        dim tviewxml
+        tviewxml = "<Items>"
+
+
+        set componentnodelist = GetComponents(xmlstr)
+        tviewxml = tviewxml & BuildItemXML(componentnodelist, param2)
+                tviewxml = tviewxml & "</Items>"
+
+        call CallSYSPROFunction(SyntaxClear, "SAMTV2S1", " ")
+        call CallSYSPROFunction(SyntaxInsertText, "SAMTV2S1", tviewxml)
+
+        call CallSYSPROFunction(TreeAddXAMLItems, "SAMTV2X0", tviewxml)
+
+       PopulateListView(param1)
+
+      case TreeClicked
+        PopulateListView(param1)
+
+
+    end select
+
+
+
+end if
+
+
+
+End Function
+
+
+''''''''''''''''''''''''''
+
+Function PopulateListView(strStockCode)
+'run the data source and populate te list view with the results
+returnValue = CallSYSPROFunction(DataSourceExecute, "BOM components single level", strStockCode)
+call CallSYSPROFunction(ListviewClearAddRecords, "SAMTV2L0", returnValue)
+
+end function
+
+
+
+Function GetBOMStructure(pStockCode)
+'simply execute the data source and return the reult - this runs BOMQRY
+GetBOMStructure = CallSYSPROFunction(DataSourceExecute, "BOM components single level", pStockCode)
+end function
+
+
+
+Function GetParentDetails(XMLStructure)
+'bulds an xml strng that defines the parent part details
+dim xmldom, ParseErr, sErrMsg
+dim m_nodelist,m_node
+
+set xmldom = CreateObject("MSXML2.DOMDocument")
+xmldom.async = "false"
+if not xmldom.loadxml(XMLStructure) then
+   Set ParseErr = xmldom.parseError
+   sErrMsg = "E) XML Parsing Error. " & VbCrLf _
+           & "File: " & ParseErr.url & VbCrLf _
+           & "Reason : " & ParseErr.reason & VbCrLf _
+           & "Line: " & ParseErr.line & VbCrLf _
+           & "Character: " & ParseErr.linepos & VbCrLf _
+           & "Text: " & ParseErr.srcText
+   MsgBox sErrMsg
+   exit function
+end If
+'if we get here we have data in an XML dom
+xmldom.setProperty "SelectionLanguage", "XPath"        'tell dom we are using XPath as the query language rather than XSL
+
+'if we get here then we have the structure loaded into the DOM,
+'now need to get all components
+
+
+set m_node = xmldom.documentElement.selectsinglenode("/BomQuery/Parent")
+
+if m_node is nothing then
+    msgbox "Unable to find <Parent> node"
+        GetParentDetails = ""
+    exit function
+end if
+
+
+dim caption
+dim key
+dim value
+dim icon
+
+caption = m_node.selectsinglenode("StockCode").text
+key = m_node.selectsinglenode("StockCode").text
+value = m_node.selectsinglenode("StockCode").text
+icon = m_node.selectsinglenode("IconOpen").text
+
+
+
+dim strxml
+strxml = strxml & "<Item Parent='0' Caption='" & caption _
+              & "' key='" &  key & "' Value='" & value & "' Icon='" & Icon & "'/>"
+GetParentDetails = strxml
+
+end function
+
+
+
+
+
+Function GetComponents(XMLStructure)
+'get all the components for a parent in an xml string
+dim xmldom, ParseErr, sErrMsg
+dim m_nodelist, m_nocomponents
+
+set xmldom = CreateObject("MSXML2.DOMDocument")
+xmldom.async = "false"
+if not xmldom.loadxml(XMLStructure) then
+   Set ParseErr = xmldom.parseError
+   sErrMsg = "E) XML Parsing Error. " & VbCrLf _
+           & "File: " & ParseErr.url & VbCrLf _
+           & "Reason : " & ParseErr.reason & VbCrLf _
+           & "Line: " & ParseErr.line & VbCrLf _
+           & "Character: " & ParseErr.linepos & VbCrLf _
+           & "Text: " & ParseErr.srcText
+   MsgBox sErrMsg
+   exit function
+end If
+'if we get here we have data in an XML dom
+xmldom.setProperty "SelectionLanguage", "XPath"        'tell dom we are using XPath as the query language rather than XSL
+
+'if we get here then we have the structure loaded into the DOM,
+'now need to get all components
+
+
+set m_nodelist = xmldom.documentElement.selectnodes("//BomQuery/Parent/Component")
+if m_nodelist.length > 0 then
+    m_nocomponents = m_nodelist.Length  'the number of component nodes
+    'msgbox "No. components : " & m_nocomponents
+
+else
+    msgbox "no <Component> elements found"
+end if
+
+'retrun the nodelist
+ set GetComponents = m_nodelist
+
+end function
+
+
+
+
+
+
+'function to take components and build item xml to populate treeview
+Function BuildItemXML(componentnodelist, parentnode)
+
+dim strxml
+dim m_node, m_nodelist, m_node2
+
+set m_nodelist = componentnodelist
+
+dim i, currentnodeindex, currentlevel,  previousnodeindex,previouslevel
+
+dim stockcode
+dim description
+dim sequencenumber
+dim qty
+dim uom
+dim key
+dim value
+dim icon
+dim xaml
+dim haschildren
+
+
+
+'loop over components
+if m_nodelist.length > 0 then
+    for each m_node in m_nodelist
+        stockcode = m_node.selectsinglenode("Component").text
+        description = m_node.selectsinglenode("Description").text
+                sequencenumber = m_node.selectsinglenode("SequenceNum").text
+                qty = m_node.selectsinglenode("QtyPer").text
+                uom = m_node.selectsinglenode("StockUom").text
+        key = m_node.selectsinglenode("Component").text
+        value = m_node.selectsinglenode("Component").text
+                icon = m_node.selectsinglenode("IconOpen").text
+
+        if icon = "4" or icon = "5" then
+            haschildren = "Y"
+        else
+            haschildren = "N"
+        end if
+
+        xaml = "{TextBlock}{Bold}" & sequencenumber & " " & stockcode & "{/Bold} " & description & " ({Run Foreground=""Blue"" Text=""" & qty & " " & uom & """/}){/TextBlock}"
+
+        strxml = strxml & "<Item Parent='" & parentnode & "' HasChildren='" & haschildren &  "' XAML='" & xaml _
+              & "' key='" & key & "' Value='" & value & "' Icon='" & icon & "' />"
+
+    next
+Else
+    msgbox "no elements found"
+end if
+
+BuildItemXML = strxml
+end function
+
+''''''''''''''''''''''''''''''''''''''
+''''''''useful functions
+''''''''''''''''''''''''''''''''''''''
+Function SysproCheckForErrors(strXMLOut)
+'this function checks to see if the XMLOut returned by a Business Object
+'has any erros and returns a formatted string of those errors
+'If there are no errors then it returns an empty string
+
+Dim m_XMLDOC
+Dim nodeList
+Dim errornode
+Dim strError
+Dim i
+
+'create XML DOM object
+Set m_XMLDOC=CreateObject("MSXML2.DOMDocument")
+m_XMLDOC.async="false"
+
+m_XMLDOC.loadXML (strXMLOut)
+Set nodeList = m_XMLDOC.SelectNodes("//ErrorDescription")
+If nodeList.Length = 0 Then
+    SysproCheckForErrors = ""
+Else
+    For Each errornode In nodeList
+        strError = strError & errornode.Text & vbCrLf
+    Next
+    SysproCheckForErrors = strError
+End If
+
+End Function
+
+Function GetDummyData()
+dim strxml
+
+strxml = strxml & "<Items>"
+strxml = strxml & "<Item Parent='0' Caption='my parent' key='B100'/>"
+strxml = strxml & "<Item Parent= '1' Caption='part1' key='A100'/>"
+strxml = strxml & "<Item Parent= '2' Caption='part1.1' key='A100'/>"
+strxml = strxml & "<Item Parent= '2' Caption='part1.2' key='A100'/>"
+strxml = strxml & "<Item Parent= '1' Caption='part2' key='A100'/>"
+
+
+strxml = strxml & "</Items>"
+
+GetDummyData = strxml
+end function
+
+
+ 
+[END VBSCRIPT]
+[DATA SOURCES]
+Name=BOM components single level;Type=B;BO=BOMQRY;QP=Q;Node=Component;NodePath=;Repeat=Y;Table=;Clear= ;ShowError=1;TranError=N;TranType=P;ReturnAll= ;Msg=The key '%key%' is invalid for the name '%name%'.;BlankKey= ;XMLStyle= ;Provider= ;XMLIN=<Query>  <Key>    <StockCode>%key%</StockCode>  </Key>  <Option>    <Version />    <Release />    <Route>0</Route>    <UnitOfMeasure>S</UnitOfMeasure>    <CostBasis>B</CostBasis>    <IncludeIcons>Y</IncludeIcons>    <Level>S</Level>    <IncludeComponentNarrations>N</IncludeComponentNarrations>    <IncludeOperationNarrations>N</IncludeOperationNarrations>    <IncludeCustomForms>N</IncludeCustomForms>    <IncludeCoProduct>N</IncludeCoProduct>    <XslStylesheet />    <UseWhRoute>N</UseWhRoute>    <Warehouse />  </Option></Query> ;ConnectionName=;MapRepeat=;MapData= ;MapOutput= ;;SQL= ]]
+[END DATA SOURCES]
+[CONNECTION STRINGS]
+Name=SYSPRO connection;String=Provider=Microsoft OLE DB Provider for SQL Server;Data Source=${ServerName};User Id=${UserID};Password=${Password};Database=${CompanyDb};
+[END CONNECTION STRINGS]
+[END SYSPRO APPLICATION DESIGNER]
