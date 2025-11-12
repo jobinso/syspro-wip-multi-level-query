@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!-- Copyright 1994-2014 SYSPRO Ltd.-->
+<!-- 
+     Sample XML for the WIP Multi-level Job Query Business Object
+-->
+<Query xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="WIPQ40.XSD">
+  <Key>
+    <MasterJob></MasterJob>
+  </Key>
+  <Option>
+    <PrintFromMasterJob>Y</PrintFromMasterJob>
+    <ReportType>T</ReportType>
+    <SummaryDetail>S</SummaryDetail>
+    <IncludeComponents>N</IncludeComponents>
+    <JobsToInclude>A</JobsToInclude>
+    <IncludeJobsAsOfDate/>
+    <PrintManufacturingUMQuantities>N</PrintManufacturingUMQuantities>
+    <XslStylesheet/>
+  </Option>
+</Query>

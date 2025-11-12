@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="Windows-1252"?>
+<!-- Copyright 1994-2014 SYSPRO Ltd.-->
+<!-- 
+     Schema for the WIP Multi-level Job Query Business Object
+-->
+<xsd:schema elementFormDefault="unqualified" attributeFormDefault="unqualified" id="NewDataSet" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <xsd:element name="WIPMultiLevelJobReport">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="SystemInformation" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="CssStyle" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Language" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="DecFormat" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="DateFormat" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Role" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Version" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="CompanyId" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="CompanyName" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorCode" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorName" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorGroup" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorEmailAddress" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorLocation" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="LocalCurrency" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="LocalCurrencyDesc" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="GlPrdPerYear" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="ReportDate" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="UseSeparatorOnReports" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="SeparatorToUse" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OperatorPrimaryRole" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="NoOfDigits" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="DecCharToUse" type="xsd:string" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="QueryOptions" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="MasterJob" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="PrintFromMasterJob" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_PrintFromMasterJob" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="ReportType" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_ReportType" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="SummaryDetail" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_SummaryDetail" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="IncludeComponents" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_IncludeComponents" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="JobsToInclude" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_JobsToInclude" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="IncludeJobsAsOfDate" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="PrintManufacturingUMQuantities" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_PrintMUMQuantitites" type="xsd:string" minOccurs="0"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+        <xsd:element name="JobDetails" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="Job" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="MasterJob" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="StockCode" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="StockDescription" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="QuantityOutstanding" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Edited_QuantityOutstanding" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="UnitOfMeasure" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="StartDate" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Warehouse" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="EndDate" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="CustomerName" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="SalesOrder" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="SalesOrderLine" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="JobFlag" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="Translated_JobFlag" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="OffsetDays" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="PlannedDays" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="WorkingDays" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="CompletedDays" type="xsd:string" minOccurs="0"/>
+              <xsd:element name="ItemDetail" minOccurs="0" maxOccurs="unbounded">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element name="ItemType" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Translated_ItemType" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Item" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Edited_Item" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="ItemDescription" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="WorkCentre" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="WorkCentreDescription" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="QuantityOutstanding" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Edited_QuantityOutstanding" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="UnitOfMeasure" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="StartDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="EndDate" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Warehouse" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Subcontract" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Translated_Subcontract" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="SubJob" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Completed" type="xsd:string" minOccurs="0"/>
+                    <xsd:element name="Translated_Completed" type="xsd:string" minOccurs="0"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
